@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function FasilitasPage() {
+export default function TentangKamiPage() {
   return (
     <main className="min-h-screen bg-tinkerbell-bg">
       {/* Navigation */}
@@ -27,13 +27,13 @@ export default function FasilitasPage() {
             
             {/* Navigation Links - Center */}
             <div className="hidden md:flex items-center space-x-10">
-              <Link href="/tentang-kami" className="text-white hover:text-tinkerbell-cta transition font-medium text-base">
+              <Link href="/tentang-kami" className="text-tinkerbell-cta transition font-medium text-base">
                 Tentang Kami
               </Link>
               <Link href="/timeline" className="text-white hover:text-tinkerbell-cta transition font-medium text-base">
                 Timeline
               </Link>
-              <Link href="/fasilitas" className="text-tinkerbell-cta transition font-medium text-base">
+              <Link href="/fasilitas" className="text-white hover:text-tinkerbell-cta transition font-medium text-base">
                 Fasilitas
               </Link>
               <Link href="/agenda" className="text-white hover:text-tinkerbell-cta transition font-medium text-base">
@@ -50,59 +50,59 @@ export default function FasilitasPage() {
           <div className="text-center space-y-6">
             <div className="flex items-center justify-center gap-4 mb-4">
               <div className="flex-1 h-0.5 bg-white/30"></div>
-              <div className="text-sm uppercase tracking-wider text-white/80">FASILITAS FINALIS</div>
+              <div className="text-sm uppercase tracking-wider text-white/80">TENTANG KAMI</div>
               <div className="flex-1 h-0.5 bg-white/30"></div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
-              Fasilitas dan Manfaat untuk Finalis
+              Mengenal Lebih Dekat Pesona Prestasi
             </h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              Sebagai finalis, Anda akan mendapatkan berbagai fasilitas eksklusif dan pengalaman berharga
+              Organisasi yang berkomitmen mengembangkan potensi terbaik remaja Indonesia melalui program kompetisi dan pengembangan karakter yang terstruktur.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Fasilitas Cards Section */}
-      <section className="py-20 bg-tinkerbell-secondary">
+      {/* Profil Pendiri Section */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Card 1 - Penginapan */}
-            <div className="bg-gray-100 p-8">
-              <div className="flex flex-col items-center text-center space-y-4">
-                <h3 className="text-2xl font-bold text-tinkerbell-text">Penginapan</h3>
-                <p className="text-tinkerbell-textSecondary">
-                  5 hari 4 malam penginapan selama karantina di Jakarta
-                </p>
-              </div>
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center gap-4 mb-4">
+              <div className="flex-1 h-0.5 bg-gray-300"></div>
+              <div className="text-sm uppercase tracking-wider text-tinkerbell-textSecondary">PROFIL PENDIRI</div>
+              <div className="flex-1 h-0.5 bg-gray-300"></div>
             </div>
-            
-            {/* Card 2 - Relasi Pelajar */}
-            <div className="bg-gray-100 p-8">
-              <div className="flex flex-col items-center text-center space-y-4">
-                <h3 className="text-2xl font-bold text-tinkerbell-text">Relasi Pelajar</h3>
-                <p className="text-tinkerbell-textSecondary">
-                  Jaringan pelajar dari berbagai provinsi di seluruh Indonesia
-                </p>
+          </div>
+
+          <div className="max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 items-start">
+              {/* Kolom Kiri - Gambar dan Info Pendiri */}
+              <div className="flex flex-col items-center space-y-6">
+                <div className="w-64 h-80 bg-gray-200 relative overflow-hidden border-4 border-gray-300">
+                  {/* Placeholder untuk gambar pendiri - ganti dengan gambar asli saat tersedia */}
+                  <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-300 to-gray-400">
+                    <span className="text-gray-600 text-sm text-center px-4">Gambar Pendiri<br/>(Saputra)</span>
+                  </div>
+                </div>
+                <div className="text-center space-y-2">
+                  <h3 className="text-2xl font-bold text-tinkerbell-text">Saputra</h3>
+                  <p className="text-lg text-tinkerbell-textSecondary">Direktur CV Pesona Prestasi Official</p>
+                </div>
               </div>
-            </div>
-            
-            {/* Card 3 - Sertifikat dan Merchandise */}
-            <div className="bg-gray-100 p-8">
-              <div className="flex flex-col items-center text-center space-y-4">
-                <h3 className="text-2xl font-bold text-tinkerbell-text">Sertifikat dan Merchandise</h3>
-                <p className="text-tinkerbell-textSecondary">
-                  Sertifikat resmi dan merchandise eksklusif sebagai kenang-kenangan
+
+              {/* Kolom Kanan - Deskripsi */}
+              <div className="space-y-6">
+                <p className="text-base md:text-lg text-tinkerbell-text leading-relaxed">
+                  Selamat datang di Pesona Prestasi Official! Saya Saputra, Direktur organisasi ini, dengan bangga mempersembahkan platform yang didedikasikan untuk mengembangkan potensi terbaik anak-anak dan remaja Indonesia.
                 </p>
-              </div>
-            </div>
-            
-            {/* Card 4 - Perlengkapan Finalis */}
-            <div className="bg-gray-100 p-8">
-              <div className="flex flex-col items-center text-center space-y-4">
-                <h3 className="text-2xl font-bold text-tinkerbell-text">Perlengkapan Finalis</h3>
-                <p className="text-tinkerbell-textSecondary">
-                  Kaos, pakaian forum, dan selempang resmi untuk kegiatan karantina
+                <p className="text-base md:text-lg text-tinkerbell-text leading-relaxed">
+                  Sebagai seorang yang memiliki komitmen kuat terhadap pendidikan dan pengembangan karakter generasi muda, saya percaya bahwa setiap anak memiliki bakat dan potensi yang luar biasa. Melalui Pesona Prestasi Official, kami berkomitmen untuk memberikan wadah yang tepat bagi mereka untuk berkembang, berprestasi, dan menjadi pemimpin masa depan.
+                </p>
+                <p className="text-base md:text-lg text-tinkerbell-text leading-relaxed">
+                  Visi kami adalah menciptakan generasi emas Indonesia yang tidak hanya cerdas secara akademis, tetapi juga memiliki karakter yang kuat, kepemimpinan yang baik, dan semangat untuk berkontribusi bagi bangsa dan negara.
+                </p>
+                <p className="text-base md:text-lg text-tinkerbell-text leading-relaxed">
+                  Saya berharap organisasi ini dapat menjadi jembatan yang menghubungkan potensi-potensi terbaik dengan kesempatan-kesempatan emas untuk berkembang. Mari bersama-sama mewujudkan Indonesia Emas 2045 melalui pengembangan bakat dan minat para remaja di seluruh Indonesia.
                 </p>
               </div>
             </div>
@@ -161,4 +161,3 @@ export default function FasilitasPage() {
     </main>
   );
 }
-

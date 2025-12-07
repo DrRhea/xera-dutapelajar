@@ -41,8 +41,8 @@ export default function Home() {
               
               {/* Navigation Links - Center */}
               <div className="hidden md:flex items-center space-x-10">
-                <Link href="#pendaftaran" className="text-white hover:text-tinkerbell-cta transition font-medium text-base">
-                  Pendaftaran
+                <Link href="/tentang-kami" className="text-white hover:text-tinkerbell-cta transition font-medium text-base">
+                  Tentang Kami
                 </Link>
                 <Link href="/timeline" className="text-white hover:text-tinkerbell-cta transition font-medium text-base">
                   Timeline
@@ -425,10 +425,10 @@ export default function Home() {
             <div>
               <h4 className="text-lg font-semibold text-white mb-4">Tautan Cepat</h4>
               <ul className="space-y-2 text-white/80">
-                <li><Link href="#pendaftaran" className="hover:text-tinkerbell-cta transition">Pendaftaran</Link></li>
-                <li><Link href="#timeline" className="hover:text-tinkerbell-cta transition">Timeline</Link></li>
+                <li><Link href="/tentang-kami" className="hover:text-tinkerbell-cta transition">Tentang Kami</Link></li>
+                <li><Link href="/timeline" className="hover:text-tinkerbell-cta transition">Timeline</Link></li>
                 <li><Link href="/fasilitas" className="hover:text-tinkerbell-cta transition">Fasilitas</Link></li>
-                <li><Link href="#agenda" className="hover:text-tinkerbell-cta transition">Agenda</Link></li>
+                <li><Link href="/agenda" className="hover:text-tinkerbell-cta transition">Agenda</Link></li>
               </ul>
             </div>
             <div>
