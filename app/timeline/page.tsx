@@ -75,138 +75,148 @@ export default function TimelinePage() {
             </p>
           </div>
 
-          <div className="relative">
-            {/* Vertical Timeline Bar */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-2 h-full">
-              {/* Segment 1 - Batch 3 Seleksi (Emas) */}
-              <div className="absolute top-0 w-full h-[20%] bg-tinkerbell-cta"></div>
-              
-              {/* Segment 2 - Batch 3 Pelaksanaan (Merah Marun) */}
-              <div className="absolute top-[20%] w-full h-[20%] bg-tinkerbell-secondary"></div>
-              
-              {/* Segment 3 - Batch 4 Seleksi (Emas) */}
-              <div className="absolute top-[40%] w-full h-[20%] bg-tinkerbell-cta"></div>
-              
-              {/* Segment 4 - Batch 4 Pelaksanaan (Merah Marun) */}
-              <div className="absolute top-[60%] w-full h-[20%] bg-tinkerbell-secondary"></div>
-              
-              {/* Segment 5 - Persiapan 2026 (Emas) */}
-              <div className="absolute top-[80%] w-full h-[20%] bg-tinkerbell-cta"></div>
+          {/* Timeline Cards - Clean Design */}
+          <div className="space-y-8">
+            {/* Item 1 - Batch 3 Seleksi */}
+            <div className="relative">
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0 w-20 h-20 bg-tinkerbell-cta rounded-full flex items-center justify-center shadow-lg z-10">
+                  <span className="text-white font-bold text-2xl">1</span>
+                </div>
+                <div className="flex-1 bg-white rounded-xl shadow-lg p-8 border-l-4 border-tinkerbell-cta hover:shadow-xl transition-shadow">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
+                    <div>
+                      <div className="text-sm font-semibold text-tinkerbell-cta uppercase tracking-wide mb-2">Januari - Februari 2025</div>
+                      <h3 className="text-2xl md:text-3xl font-bold text-tinkerbell-text mb-2">Proses Seleksi Batch 3</h3>
+                    </div>
+                    <div className="px-5 py-2.5 bg-tinkerbell-cta/10 rounded-full">
+                      <span className="text-base font-semibold text-tinkerbell-text">Target: 250+ Peserta</span>
+                    </div>
+                  </div>
+                  <p className="text-base md:text-lg text-tinkerbell-textSecondary leading-relaxed mb-4">
+                    Proses seleksi pemilihan Duta Pelajar Remaja Indonesia Batch 3. Tahapan meliputi pendaftaran online, seleksi berkas, wawancara, dan pengumuman finalis.
+                  </p>
+                  <div className="mt-6 p-5 bg-tinkerbell-cta/5 rounded-lg border-l-4 border-tinkerbell-cta">
+                    <p className="text-sm font-semibold text-tinkerbell-text mb-2">Target Capaian:</p>
+                    <p className="text-sm text-tinkerbell-textSecondary">250+ Peserta Mendaftar</p>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            {/* Timeline Items */}
-            <div className="relative space-y-24">
-              {/* Item 1 - Batch 3 Seleksi */}
-              <div className="relative flex items-center min-h-[180px]">
-                <div className="w-[45%] pr-12 text-right">
-                  <div className="space-y-3">
-                    <div className="text-2xl md:text-3xl font-bold text-tinkerbell-text">Januari - Februari 2025</div>
-                    <h3 className="text-xl md:text-2xl font-semibold text-tinkerbell-text">Proses Seleksi Batch 3</h3>
-                    <p className="text-base md:text-lg text-tinkerbell-textSecondary leading-relaxed max-w-md ml-auto">
-                      Proses seleksi pemilihan Duta Pelajar Remaja Indonesia Batch 3. Tahapan meliputi pendaftaran online, seleksi berkas, wawancara, dan pengumuman finalis.
-                    </p>
-                    <div className="mt-4 p-4 bg-tinkerbell-cta/10 border-l-4 border-tinkerbell-cta">
-                      <p className="text-sm font-semibold text-tinkerbell-text">Target Capaian:</p>
-                      <p className="text-sm text-tinkerbell-textSecondary">250+ Peserta Mendaftar</p>
+            {/* Item 2 - Batch 3 Pelaksanaan */}
+            <div className="relative">
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0 w-20 h-20 bg-tinkerbell-secondary rounded-full flex items-center justify-center shadow-lg z-10">
+                  <span className="text-white font-bold text-2xl">2</span>
+                </div>
+                <div className="flex-1 bg-white rounded-xl shadow-lg p-8 border-l-4 border-tinkerbell-secondary hover:shadow-xl transition-shadow">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
+                    <div>
+                      <div className="text-sm font-semibold text-tinkerbell-secondary uppercase tracking-wide mb-2">Februari - April 2025</div>
+                      <h3 className="text-2xl md:text-3xl font-bold text-tinkerbell-text mb-2">Pelaksanaan Tugas Batch 3</h3>
+                    </div>
+                    <div className="px-5 py-2.5 bg-tinkerbell-secondary/10 rounded-full">
+                      <span className="text-base font-semibold text-tinkerbell-text">Program & Pembinaan</span>
                     </div>
                   </div>
-                </div>
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-tinkerbell-cta border-4 border-white flex items-center justify-center z-10 shadow-lg">
-                  <span className="text-white font-bold text-lg">1</span>
-                </div>
-                <div className="w-[45%]"></div>
-              </div>
-
-              {/* Item 2 - Batch 3 Pelaksanaan */}
-              <div className="relative flex items-center min-h-[180px]">
-                <div className="w-[45%]"></div>
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-tinkerbell-secondary border-4 border-white flex items-center justify-center z-10 shadow-lg">
-                  <span className="text-white font-bold text-lg">2</span>
-                </div>
-                <div className="w-[45%] pl-12 text-left">
-                  <div className="space-y-3">
-                    <div className="text-2xl md:text-3xl font-bold text-tinkerbell-text">Februari - April 2025</div>
-                    <h3 className="text-xl md:text-2xl font-semibold text-tinkerbell-text">Pelaksanaan Tugas Batch 3</h3>
-                    <p className="text-base md:text-lg text-tinkerbell-textSecondary leading-relaxed max-w-md">
-                      Pelaksanaan tugas sebagai Duta Pelajar Remaja Indonesia Batch 3. Finalis akan menjalankan berbagai program dan kegiatan pembinaan.
-                    </p>
-                    <div className="mt-4 p-4 bg-tinkerbell-secondary/10 border-l-4 border-tinkerbell-secondary">
-                      <p className="text-sm font-semibold text-tinkerbell-text">Target Capaian:</p>
-                      <ul className="text-sm text-tinkerbell-textSecondary space-y-1 mt-2 list-disc list-inside">
-                        <li>Mampu menjadi teladan bagi pelajar di Indonesia</li>
-                        <li>Mampu memberikan konten edukatif kepada remaja Indonesia</li>
-                        <li>Mampu melakukan penyuluhan melalui sosialisasi</li>
-                      </ul>
-                    </div>
+                  <p className="text-base md:text-lg text-tinkerbell-textSecondary leading-relaxed mb-4">
+                    Pelaksanaan tugas sebagai Duta Pelajar Remaja Indonesia Batch 3. Finalis akan menjalankan berbagai program dan kegiatan pembinaan.
+                  </p>
+                  <div className="mt-6 p-5 bg-tinkerbell-secondary/5 rounded-lg border-l-4 border-tinkerbell-secondary">
+                    <p className="text-sm font-semibold text-tinkerbell-text mb-2">Target Capaian:</p>
+                    <ul className="text-sm text-tinkerbell-textSecondary space-y-1.5 list-disc list-inside">
+                      <li>Mampu menjadi teladan bagi pelajar di Indonesia</li>
+                      <li>Mampu memberikan konten edukatif kepada remaja Indonesia</li>
+                      <li>Mampu melakukan penyuluhan melalui sosialisasi</li>
+                    </ul>
                   </div>
                 </div>
               </div>
+            </div>
 
-              {/* Item 3 - Batch 4 Seleksi */}
-              <div className="relative flex items-center min-h-[180px]">
-                <div className="w-[45%] pr-12 text-right">
-                  <div className="space-y-3">
-                    <div className="text-2xl md:text-3xl font-bold text-tinkerbell-text">April - Juni 2025</div>
-                    <h3 className="text-xl md:text-2xl font-semibold text-tinkerbell-text">Proses Seleksi Batch 4</h3>
-                    <p className="text-base md:text-lg text-tinkerbell-textSecondary leading-relaxed max-w-md ml-auto">
-                      Proses seleksi pemilihan Duta Pelajar Remaja Indonesia Batch 4. Tahapan meliputi pendaftaran online, seleksi berkas, wawancara, dan pengumuman finalis.
-                    </p>
-                    <div className="mt-4 p-4 bg-tinkerbell-cta/10 border-l-4 border-tinkerbell-cta">
-                      <p className="text-sm font-semibold text-tinkerbell-text">Target Capaian:</p>
-                      <p className="text-sm text-tinkerbell-textSecondary">250+ Peserta Mendaftar</p>
+            {/* Item 3 - Batch 4 Seleksi */}
+            <div className="relative">
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0 w-20 h-20 bg-tinkerbell-cta rounded-full flex items-center justify-center shadow-lg z-10">
+                  <span className="text-white font-bold text-2xl">3</span>
+                </div>
+                <div className="flex-1 bg-white rounded-xl shadow-lg p-8 border-l-4 border-tinkerbell-cta hover:shadow-xl transition-shadow">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
+                    <div>
+                      <div className="text-sm font-semibold text-tinkerbell-cta uppercase tracking-wide mb-2">April - Juni 2025</div>
+                      <h3 className="text-2xl md:text-3xl font-bold text-tinkerbell-text mb-2">Proses Seleksi Batch 4</h3>
+                    </div>
+                    <div className="px-5 py-2.5 bg-tinkerbell-cta/10 rounded-full">
+                      <span className="text-base font-semibold text-tinkerbell-text">Target: 250+ Peserta</span>
                     </div>
                   </div>
-                </div>
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-tinkerbell-cta border-4 border-white flex items-center justify-center z-10 shadow-lg">
-                  <span className="text-white font-bold text-lg">3</span>
-                </div>
-                <div className="w-[45%]"></div>
-              </div>
-
-              {/* Item 4 - Batch 4 Pelaksanaan */}
-              <div className="relative flex items-center min-h-[180px]">
-                <div className="w-[45%]"></div>
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-tinkerbell-secondary border-4 border-white flex items-center justify-center z-10 shadow-lg">
-                  <span className="text-white font-bold text-lg">4</span>
-                </div>
-                <div className="w-[45%] pl-12 text-left">
-                  <div className="space-y-3">
-                    <div className="text-2xl md:text-3xl font-bold text-tinkerbell-text">Juni - Agustus 2025</div>
-                    <h3 className="text-xl md:text-2xl font-semibold text-tinkerbell-text">Pelaksanaan Tugas Batch 4</h3>
-                    <p className="text-base md:text-lg text-tinkerbell-textSecondary leading-relaxed max-w-md">
-                      Pelaksanaan tugas sebagai Duta Pelajar Remaja Indonesia Batch 4. Finalis akan menjalankan berbagai program dan kegiatan pembinaan.
-                    </p>
-                    <div className="mt-4 p-4 bg-tinkerbell-secondary/10 border-l-4 border-tinkerbell-secondary">
-                      <p className="text-sm font-semibold text-tinkerbell-text">Target Capaian:</p>
-                      <ul className="text-sm text-tinkerbell-textSecondary space-y-1 mt-2 list-disc list-inside">
-                        <li>Mampu menjadi teladan bagi pelajar di Indonesia</li>
-                        <li>Mampu memberikan konten edukatif kepada remaja Indonesia</li>
-                        <li>Mampu melakukan penyuluhan melalui sosialisasi</li>
-                      </ul>
-                    </div>
+                  <p className="text-base md:text-lg text-tinkerbell-textSecondary leading-relaxed mb-4">
+                    Proses seleksi pemilihan Duta Pelajar Remaja Indonesia Batch 4. Tahapan meliputi pendaftaran online, seleksi berkas, wawancara, dan pengumuman finalis.
+                  </p>
+                  <div className="mt-6 p-5 bg-tinkerbell-cta/5 rounded-lg border-l-4 border-tinkerbell-cta">
+                    <p className="text-sm font-semibold text-tinkerbell-text mb-2">Target Capaian:</p>
+                    <p className="text-sm text-tinkerbell-textSecondary">250+ Peserta Mendaftar</p>
                   </div>
                 </div>
               </div>
+            </div>
 
-              {/* Item 5 - Persiapan 2026 */}
-              <div className="relative flex items-center min-h-[180px]">
-                <div className="w-[45%] pr-12 text-right">
-                  <div className="space-y-3">
-                    <div className="text-2xl md:text-3xl font-bold text-tinkerbell-text">Agustus - November 2025</div>
-                    <h3 className="text-xl md:text-2xl font-semibold text-tinkerbell-text">Persiapan Pemilihan 2026</h3>
-                    <p className="text-base md:text-lg text-tinkerbell-textSecondary leading-relaxed max-w-md ml-auto">
-                      Persiapan pemilihan Duta Pelajar Remaja Indonesia Tahun 2026. Fokus pada sosialisasi, promosi program, dan persiapan infrastruktur seleksi.
-                    </p>
-                    <div className="mt-4 p-4 bg-tinkerbell-cta/10 border-l-4 border-tinkerbell-cta">
-                      <p className="text-sm font-semibold text-tinkerbell-text">Target Capaian:</p>
-                      <p className="text-sm text-tinkerbell-textSecondary">Mampu mengajak pelajar berprestasi dan berpotensi untuk mengikuti pemilihan</p>
+            {/* Item 4 - Batch 4 Pelaksanaan */}
+            <div className="relative">
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0 w-20 h-20 bg-tinkerbell-secondary rounded-full flex items-center justify-center shadow-lg z-10">
+                  <span className="text-white font-bold text-2xl">4</span>
+                </div>
+                <div className="flex-1 bg-white rounded-xl shadow-lg p-8 border-l-4 border-tinkerbell-secondary hover:shadow-xl transition-shadow">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
+                    <div>
+                      <div className="text-sm font-semibold text-tinkerbell-secondary uppercase tracking-wide mb-2">Juni - Agustus 2025</div>
+                      <h3 className="text-2xl md:text-3xl font-bold text-tinkerbell-text mb-2">Pelaksanaan Tugas Batch 4</h3>
+                    </div>
+                    <div className="px-5 py-2.5 bg-tinkerbell-secondary/10 rounded-full">
+                      <span className="text-base font-semibold text-tinkerbell-text">Program & Pembinaan</span>
                     </div>
                   </div>
+                  <p className="text-base md:text-lg text-tinkerbell-textSecondary leading-relaxed mb-4">
+                    Pelaksanaan tugas sebagai Duta Pelajar Remaja Indonesia Batch 4. Finalis akan menjalankan berbagai program dan kegiatan pembinaan.
+                  </p>
+                  <div className="mt-6 p-5 bg-tinkerbell-secondary/5 rounded-lg border-l-4 border-tinkerbell-secondary">
+                    <p className="text-sm font-semibold text-tinkerbell-text mb-2">Target Capaian:</p>
+                    <ul className="text-sm text-tinkerbell-textSecondary space-y-1.5 list-disc list-inside">
+                      <li>Mampu menjadi teladan bagi pelajar di Indonesia</li>
+                      <li>Mampu memberikan konten edukatif kepada remaja Indonesia</li>
+                      <li>Mampu melakukan penyuluhan melalui sosialisasi</li>
+                    </ul>
+                  </div>
                 </div>
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-tinkerbell-cta border-4 border-white flex items-center justify-center z-10 shadow-lg">
-                  <span className="text-white font-bold text-lg">5</span>
+              </div>
+            </div>
+
+            {/* Item 5 - Persiapan 2026 */}
+            <div className="relative">
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0 w-20 h-20 bg-tinkerbell-cta rounded-full flex items-center justify-center shadow-lg z-10">
+                  <span className="text-white font-bold text-2xl">5</span>
                 </div>
-                <div className="w-[45%]"></div>
+                <div className="flex-1 bg-white rounded-xl shadow-lg p-8 border-l-4 border-tinkerbell-cta hover:shadow-xl transition-shadow">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
+                    <div>
+                      <div className="text-sm font-semibold text-tinkerbell-cta uppercase tracking-wide mb-2">Agustus - November 2025</div>
+                      <h3 className="text-2xl md:text-3xl font-bold text-tinkerbell-text mb-2">Persiapan Pemilihan 2026</h3>
+                    </div>
+                    <div className="px-5 py-2.5 bg-tinkerbell-cta/10 rounded-full">
+                      <span className="text-base font-semibold text-tinkerbell-text">Sosialisasi & Promosi</span>
+                    </div>
+                  </div>
+                  <p className="text-base md:text-lg text-tinkerbell-textSecondary leading-relaxed mb-4">
+                    Persiapan pemilihan Duta Pelajar Remaja Indonesia Tahun 2026. Fokus pada sosialisasi, promosi program, dan persiapan infrastruktur seleksi.
+                  </p>
+                  <div className="mt-6 p-5 bg-tinkerbell-cta/5 rounded-lg border-l-4 border-tinkerbell-cta">
+                    <p className="text-sm font-semibold text-tinkerbell-text mb-2">Target Capaian:</p>
+                    <p className="text-sm text-tinkerbell-textSecondary">Mampu mengajak pelajar berprestasi dan berpotensi untuk mengikuti pemilihan</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

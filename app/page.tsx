@@ -208,92 +208,109 @@ export default function Home() {
             </p>
           </div>
           
-          {/* Timeline Preview - Vertical Loading Bar */}
-          <div className="max-w-4xl mx-auto">
+          {/* Timeline Cards - Clean Design */}
+          <div className="max-w-5xl mx-auto space-y-6">
+            {/* Item 1 - Batch 3 Seleksi */}
             <div className="relative">
-              {/* Vertical Timeline Bar */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-2 h-96">
-                {/* Segment 1 - Batch 3 Seleksi (Emas) */}
-                <div className="absolute top-0 w-full h-[20%] bg-tinkerbell-cta"></div>
-                
-                {/* Segment 2 - Batch 3 Pelaksanaan (Merah Marun) */}
-                <div className="absolute top-[20%] w-full h-[20%] bg-tinkerbell-secondary"></div>
-                
-                {/* Segment 3 - Batch 4 Seleksi (Emas) */}
-                <div className="absolute top-[40%] w-full h-[20%] bg-tinkerbell-cta"></div>
-                
-                {/* Segment 4 - Batch 4 Pelaksanaan (Merah Marun) */}
-                <div className="absolute top-[60%] w-full h-[20%] bg-tinkerbell-secondary"></div>
-                
-                {/* Segment 5 - Persiapan 2026 (Emas) */}
-                <div className="absolute top-[80%] w-full h-[20%] bg-tinkerbell-cta"></div>
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0 w-16 h-16 bg-tinkerbell-cta rounded-full flex items-center justify-center shadow-lg z-10">
+                  <span className="text-white font-bold text-xl">1</span>
+                </div>
+                <div className="flex-1 bg-white rounded-lg shadow-md p-6 border-l-4 border-tinkerbell-cta">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-3">
+                    <div>
+                      <div className="text-sm font-semibold text-tinkerbell-cta uppercase tracking-wide mb-1">Januari - Februari 2025</div>
+                      <h3 className="text-xl md:text-2xl font-bold text-tinkerbell-text">Proses Seleksi Batch 3</h3>
+                    </div>
+                    <div className="px-4 py-2 bg-tinkerbell-cta/10 rounded-full">
+                      <span className="text-sm font-semibold text-tinkerbell-text">Target: 250+ Peserta</span>
+                    </div>
+                  </div>
+                  <p className="text-tinkerbell-textSecondary">Pendaftaran online, seleksi berkas, wawancara, dan pengumuman finalis</p>
+                </div>
               </div>
+            </div>
 
-              {/* Timeline Items */}
-              <div className="relative space-y-20">
-                {/* Item 1 - Batch 3 Seleksi */}
-                <div className="relative flex items-center">
-                  <div className="w-[45%] pr-8 text-right">
-                    <div className="text-xl md:text-2xl font-bold text-tinkerbell-text">Jan - Feb 2025</div>
-                    <h3 className="text-lg md:text-xl font-semibold text-tinkerbell-text">Seleksi Batch 3</h3>
-                    <p className="text-sm text-tinkerbell-textSecondary mt-1">Target: 250+ Peserta</p>
-                  </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-tinkerbell-cta border-4 border-white flex items-center justify-center z-10">
-                    <span className="text-white font-bold">1</span>
-                  </div>
-                  <div className="w-[45%]"></div>
+            {/* Item 2 - Batch 3 Pelaksanaan */}
+            <div className="relative">
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0 w-16 h-16 bg-tinkerbell-secondary rounded-full flex items-center justify-center shadow-lg z-10">
+                  <span className="text-white font-bold text-xl">2</span>
                 </div>
-
-                {/* Item 2 - Batch 3 Pelaksanaan */}
-                <div className="relative flex items-center">
-                  <div className="w-[45%]"></div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-tinkerbell-secondary border-4 border-white flex items-center justify-center z-10">
-                    <span className="text-white font-bold">2</span>
+                <div className="flex-1 bg-white rounded-lg shadow-md p-6 border-l-4 border-tinkerbell-secondary">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-3">
+                    <div>
+                      <div className="text-sm font-semibold text-tinkerbell-secondary uppercase tracking-wide mb-1">Februari - April 2025</div>
+                      <h3 className="text-xl md:text-2xl font-bold text-tinkerbell-text">Pelaksanaan Tugas Batch 3</h3>
+                    </div>
+                    <div className="px-4 py-2 bg-tinkerbell-secondary/10 rounded-full">
+                      <span className="text-sm font-semibold text-tinkerbell-text">Program & Pembinaan</span>
+                    </div>
                   </div>
-                  <div className="w-[45%] pl-8 text-left">
-                    <div className="text-xl md:text-2xl font-bold text-tinkerbell-text">Feb - Apr 2025</div>
-                    <h3 className="text-lg md:text-xl font-semibold text-tinkerbell-text">Pelaksanaan Batch 3</h3>
-                    <p className="text-sm text-tinkerbell-textSecondary mt-1">Program & Pembinaan</p>
-                  </div>
+                  <p className="text-tinkerbell-textSecondary">Jalankan program dan kegiatan pembinaan sebagai Duta Pelajar Remaja Indonesia</p>
                 </div>
+              </div>
+            </div>
 
-                {/* Item 3 - Batch 4 Seleksi */}
-                <div className="relative flex items-center">
-                  <div className="w-[45%] pr-8 text-right">
-                    <div className="text-xl md:text-2xl font-bold text-tinkerbell-text">Apr - Jun 2025</div>
-                    <h3 className="text-lg md:text-xl font-semibold text-tinkerbell-text">Seleksi Batch 4</h3>
-                    <p className="text-sm text-tinkerbell-textSecondary mt-1">Target: 250+ Peserta</p>
-                  </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-tinkerbell-cta border-4 border-white flex items-center justify-center z-10">
-                    <span className="text-white font-bold">3</span>
-                  </div>
-                  <div className="w-[45%]"></div>
+            {/* Item 3 - Batch 4 Seleksi */}
+            <div className="relative">
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0 w-16 h-16 bg-tinkerbell-cta rounded-full flex items-center justify-center shadow-lg z-10">
+                  <span className="text-white font-bold text-xl">3</span>
                 </div>
-
-                {/* Item 4 - Batch 4 Pelaksanaan */}
-                <div className="relative flex items-center">
-                  <div className="w-[45%]"></div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-tinkerbell-secondary border-4 border-white flex items-center justify-center z-10">
-                    <span className="text-white font-bold">4</span>
+                <div className="flex-1 bg-white rounded-lg shadow-md p-6 border-l-4 border-tinkerbell-cta">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-3">
+                    <div>
+                      <div className="text-sm font-semibold text-tinkerbell-cta uppercase tracking-wide mb-1">April - Juni 2025</div>
+                      <h3 className="text-xl md:text-2xl font-bold text-tinkerbell-text">Proses Seleksi Batch 4</h3>
+                    </div>
+                    <div className="px-4 py-2 bg-tinkerbell-cta/10 rounded-full">
+                      <span className="text-sm font-semibold text-tinkerbell-text">Target: 250+ Peserta</span>
+                    </div>
                   </div>
-                  <div className="w-[45%] pl-8 text-left">
-                    <div className="text-xl md:text-2xl font-bold text-tinkerbell-text">Jun - Agu 2025</div>
-                    <h3 className="text-lg md:text-xl font-semibold text-tinkerbell-text">Pelaksanaan Batch 4</h3>
-                    <p className="text-sm text-tinkerbell-textSecondary mt-1">Program & Pembinaan</p>
-                  </div>
+                  <p className="text-tinkerbell-textSecondary">Pendaftaran online, seleksi berkas, wawancara, dan pengumuman finalis</p>
                 </div>
+              </div>
+            </div>
 
-                {/* Item 5 - Persiapan 2026 */}
-                <div className="relative flex items-center">
-                  <div className="w-[45%] pr-8 text-right">
-                    <div className="text-xl md:text-2xl font-bold text-tinkerbell-text">Agu - Nov 2025</div>
-                    <h3 className="text-lg md:text-xl font-semibold text-tinkerbell-text">Persiapan 2026</h3>
-                    <p className="text-sm text-tinkerbell-textSecondary mt-1">Sosialisasi & Promosi</p>
+            {/* Item 4 - Batch 4 Pelaksanaan */}
+            <div className="relative">
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0 w-16 h-16 bg-tinkerbell-secondary rounded-full flex items-center justify-center shadow-lg z-10">
+                  <span className="text-white font-bold text-xl">4</span>
+                </div>
+                <div className="flex-1 bg-white rounded-lg shadow-md p-6 border-l-4 border-tinkerbell-secondary">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-3">
+                    <div>
+                      <div className="text-sm font-semibold text-tinkerbell-secondary uppercase tracking-wide mb-1">Juni - Agustus 2025</div>
+                      <h3 className="text-xl md:text-2xl font-bold text-tinkerbell-text">Pelaksanaan Tugas Batch 4</h3>
+                    </div>
+                    <div className="px-4 py-2 bg-tinkerbell-secondary/10 rounded-full">
+                      <span className="text-sm font-semibold text-tinkerbell-text">Program & Pembinaan</span>
+                    </div>
                   </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-tinkerbell-cta border-4 border-white flex items-center justify-center z-10">
-                    <span className="text-white font-bold">5</span>
+                  <p className="text-tinkerbell-textSecondary">Jalankan program dan kegiatan pembinaan sebagai Duta Pelajar Remaja Indonesia</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Item 5 - Persiapan 2026 */}
+            <div className="relative">
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0 w-16 h-16 bg-tinkerbell-cta rounded-full flex items-center justify-center shadow-lg z-10">
+                  <span className="text-white font-bold text-xl">5</span>
+                </div>
+                <div className="flex-1 bg-white rounded-lg shadow-md p-6 border-l-4 border-tinkerbell-cta">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-3">
+                    <div>
+                      <div className="text-sm font-semibold text-tinkerbell-cta uppercase tracking-wide mb-1">Agustus - November 2025</div>
+                      <h3 className="text-xl md:text-2xl font-bold text-tinkerbell-text">Persiapan Pemilihan 2026</h3>
+                    </div>
+                    <div className="px-4 py-2 bg-tinkerbell-cta/10 rounded-full">
+                      <span className="text-sm font-semibold text-tinkerbell-text">Sosialisasi & Promosi</span>
+                    </div>
                   </div>
-                  <div className="w-[45%]"></div>
+                  <p className="text-tinkerbell-textSecondary">Sosialisasi program, promosi, dan persiapan infrastruktur seleksi untuk tahun 2026</p>
                 </div>
               </div>
             </div>
@@ -302,7 +319,7 @@ export default function Home() {
           <div className="text-center mt-12">
             <Link
               href="/timeline"
-              className="inline-block px-8 py-4 bg-tinkerbell-cta text-white text-lg font-semibold hover:opacity-90 transition"
+              className="inline-block px-8 py-4 bg-tinkerbell-cta text-white text-lg font-semibold hover:opacity-90 transition rounded-lg shadow-lg"
             >
               LIHAT TIMELINE LENGKAP
             </Link>
