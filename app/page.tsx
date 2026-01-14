@@ -85,12 +85,16 @@ export default function Home() {
                 >
                   DAFTAR SEKARANG
                 </Link>
-                <Link
-                  href="#"
-                  className="px-8 py-4 bg-white/20 text-white text-lg font-semibold hover:bg-white/30 transition border-2 border-white/50"
+                <a
+                  href="/documents/Pedoman-DPRI-2026.pdf"
+                  download="Pedoman-DPRI-2026.pdf"
+                  className="px-8 py-4 bg-white/20 text-white text-lg font-semibold hover:bg-white/30 transition border-2 border-white/50 inline-flex items-center gap-2"
                 >
-                  UNDUH PETUNJUK TEKNIS (PDF)
-                </Link>
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                  UNDUH PEDOMAN DPRI 2026 (PDF)
+                </a>
               </div>
             </div>
           </div>
@@ -467,12 +471,16 @@ export default function Home() {
               >
                 DAFTAR SEKARANG
               </Link>
-              <Link
-                href="#"
-                className="px-8 py-4 bg-white text-tinkerbell-text text-lg font-semibold hover:bg-gray-50 transition border-2 border-tinkerbell-cta"
+              <a
+                href="/documents/Pedoman-DPRI-2026.pdf"
+                download="Pedoman-DPRI-2026.pdf"
+                className="px-8 py-4 bg-white text-tinkerbell-text text-lg font-semibold hover:bg-gray-50 transition border-2 border-tinkerbell-cta inline-flex items-center gap-2"
               >
-                UNDUH PETUNJUK TEKNIS LENGKAP
-              </Link>
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                UNDUH PEDOMAN DPRI 2026 (PDF)
+              </a>
             </div>
           </div>
         </div>

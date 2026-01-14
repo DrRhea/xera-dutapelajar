@@ -166,6 +166,40 @@ export default function TentangKamiPage() {
         </div>
       </section>
 
+      {/* Download Pedoman Section */}
+      <section className="py-20 bg-tinkerbell-bg">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-xl shadow-lg p-8 md:p-12 text-center">
+            <div className="mb-6">
+              <div className="w-20 h-20 bg-tinkerbell-cta/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-10 h-10 text-tinkerbell-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <h3 className="text-3xl md:text-4xl font-bold text-tinkerbell-text mb-4">
+                Pedoman Duta Pelajar Remaja Indonesia
+              </h3>
+              <p className="text-lg text-tinkerbell-textSecondary mb-6">
+                Unduh buku pedoman resmi Duta Pelajar Remaja Indonesia Edisi 2025/2026 untuk memahami visi, misi, mekanisme, dan ketentuan program secara lengkap.
+              </p>
+            </div>
+            <a
+              href="/documents/Pedoman-DPRI-2026.pdf"
+              download="Pedoman-DPRI-2026.pdf"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-tinkerbell-cta text-white text-lg font-semibold hover:opacity-90 transition rounded-lg shadow-lg"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Unduh Pedoman DPRI 2026 (PDF)
+            </a>
+            <p className="text-sm text-tinkerbell-textSecondary mt-4">
+              File size: ~1 MB | Format: PDF
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-tinkerbell-secondary py-12 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
