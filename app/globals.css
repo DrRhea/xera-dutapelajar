@@ -3,24 +3,39 @@
 @tailwind utilities;
 
 :root {
-  --background: #FAF9F6;
-  --foreground: #333333;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #1A0505;
+  --foreground: #F2F0E6;
+  --luxury-radial-center: #2B0A0A;
+  --luxury-scaffold: #1A0505;
+  --luxury-glass: rgba(62, 18, 18, 0.7);
+  --luxury-accent: #D4AF37;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: var(--font-plus-jakarta-sans), var(--font-inter), -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 * {
   scroll-behavior: smooth;
 }
 
+/* Ultra-Dark Maroon Luxury: radial gradient scaffold (vignette) */
+.bg-luxury-radial {
+  background: radial-gradient(ellipse 80% 80% at 50% 50%, var(--luxury-radial-center) 0%, var(--luxury-scaffold) 70%, var(--luxury-scaffold) 100%);
+}
+
+/* Optional: subtle geometric pattern overlay */
+.bg-luxury-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30Z' fill='none' stroke='%23F2F0E6' stroke-width='0.15' stroke-opacity='0.05'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
+/* Dark glassmorphism card */
+.glass-dark {
+  background: var(--luxury-glass);
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.5);
+}

@@ -23,17 +23,17 @@ export default function Navbar() {
       "text-sm font-medium uppercase tracking-wider transition";
     if (isTransparent) {
       return isActive
-        ? `${base} text-white border-b-2 border-white pb-0.5`
-        : `${base} text-white/90 hover:text-white`;
+        ? `${base} text-luxury-text border-b-2 border-luxury-accent pb-0.5`
+        : `${base} text-luxury-text/90 hover:text-luxury-text`;
     }
     return isActive
-      ? `${base} text-tinkerbell-cta`
-      : `${base} text-white hover:text-tinkerbell-cta`;
+      ? `${base} text-luxury-accent`
+      : `${base} text-luxury-text hover:text-luxury-accent`;
   };
 
   return (
     <nav
-      className={`w-full ${isTransparent ? "bg-transparent fixed top-0 left-0 right-0 z-50" : "bg-tinkerbell-secondary relative z-10"}`}
+      className={`w-full ${isTransparent ? "bg-transparent fixed top-0 left-0 right-0 z-50" : "bg-luxury-scaffold border-b border-white/10 relative z-10"}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
@@ -50,7 +50,7 @@ export default function Navbar() {
               priority
             />
             <span
-              className={`font-semibold text-sm uppercase tracking-wide hidden sm:block ${isTransparent ? "text-white" : "text-white"}`}
+              className={`font-semibold text-sm uppercase tracking-wide hidden sm:block text-luxury-text`}
             >
               DPR Indonesia
             </span>
@@ -65,7 +65,7 @@ export default function Navbar() {
               href="https://instagram.com/dpr_indonesia.official"
               target="_blank"
               rel="noopener noreferrer"
-              className={`text-sm font-medium uppercase tracking-wider transition ${isTransparent ? "text-white/90 hover:text-white" : "text-white hover:text-tinkerbell-cta"}`}
+              className={`text-sm font-medium uppercase tracking-wider transition ${isTransparent ? "text-luxury-text/90 hover:text-luxury-text" : "text-luxury-text hover:text-luxury-accent"}`}
             >
               Kontak
             </a>
