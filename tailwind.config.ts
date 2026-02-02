@@ -9,29 +9,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-        luxury: {
-          scaffold: "#1A0505",       // Deepest Burgundy (main bg)
-          radialCenter: "#2B0A0A",   // Radial gradient center
-          glass: "#3E1212",          // Dark glass card bg
-          text: "#F2F0E6",           // Off-white (main text)
-          textMuted: "rgba(242,240,230,0.75)",
-          accent: "#D4AF37",         // Gold Satin (buttons, icons)
-        },
-        tinkerbell: {
-          cta: "#D4AF37",
-          secondary: "#8B0000",
-          bg: "#FAF9F6",
-          text: "#333333",
-          textSecondary: "#666666",
-        },
+        primary: "#780A0A",
+        secondary: "#FFFFFF",
+        accent: "#D4AF37",
+        surface: "#FFF5F5",
+        "text-dark": "#1F2937",
+        "text-light": "#6B7280",
       },
       fontFamily: {
-        serif: ["var(--font-playfair)", "Georgia", "serif"],
+        sans: ['Google Sans', 'Product Sans', 'var(--font-inter)', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
-        "glass": "0 0 20px -5px rgba(0,0,0,0.5)",
+        soft: "0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06)",
+        md: "0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06)",
       },
     },
   },

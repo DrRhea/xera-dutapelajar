@@ -3,39 +3,39 @@
 @tailwind utilities;
 
 :root {
-  --background: #1A0505;
-  --foreground: #F2F0E6;
-  --luxury-radial-center: #2B0A0A;
-  --luxury-scaffold: #1A0505;
-  --luxury-glass: rgba(62, 18, 18, 0.7);
-  --luxury-accent: #D4AF37;
+  --primary: #780A0A;
+  --secondary: #FFFFFF;
+  --accent: #D4AF37;
+  --surface: #FFF5F5;
+  --text-dark: #1F2937;
+  --text-light: #6B7280;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: var(--font-plus-jakarta-sans), var(--font-inter), -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text-dark);
+  background: var(--secondary);
+  font-family: 'Google Sans', 'Product Sans', var(--font-inter), -apple-system, BlinkMacSystemFont, sans-serif;
+  @apply font-sans antialiased;
 }
 
 * {
   scroll-behavior: smooth;
 }
 
-/* Ultra-Dark Maroon Luxury: radial gradient scaffold (vignette) */
-.bg-luxury-radial {
-  background: radial-gradient(ellipse 80% 80% at 50% 50%, var(--luxury-radial-center) 0%, var(--luxury-scaffold) 70%, var(--luxury-scaffold) 100%);
+/* Primary brand gradient background */
+.bg-primary-gradient {
+  background: linear-gradient(135deg, var(--primary) 0%, #5C0707 100%);
 }
 
-/* Optional: subtle geometric pattern overlay */
-.bg-luxury-pattern {
-  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30Z' fill='none' stroke='%23F2F0E6' stroke-width='0.15' stroke-opacity='0.05'/%3E%3C/svg%3E");
-  background-repeat: repeat;
+/* Light surface section */
+.bg-surface-light {
+  background: var(--surface);
 }
 
-/* Dark glassmorphism card */
-.glass-dark {
-  background: var(--luxury-glass);
-  border: 0.5px solid rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.5);
+/* Standard card styling */
+.card {
+  background: var(--secondary);
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
