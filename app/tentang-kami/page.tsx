@@ -17,7 +17,7 @@ export default function TentangKamiPage() {
               Tentang Duta Pelajar Remaja Indonesia
             </h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              "Remaja hebat, cerdas dan berkualitas" - Program di bawah naungan CV. Pesona Prestasi Official
+              "Remaja Hebat, Cerdas &amp; Berkualitas" - Program di bawah naungan CV. Pesona Prestasi Official
             </p>
           </div>
         </div>
@@ -158,7 +158,7 @@ export default function TentangKamiPage() {
                   </div>
                   <div className="flex flex-col md:flex-row md:items-start gap-2">
                     <span className="font-semibold text-primary min-w-[120px]">Alamat Kantor:</span>
-                    <span className="text-lg">Jl. H. Rais. A. Rachman Gg. Bukit Sebedang No.21, Sungai Jawi, Pontianak</span>
+                    <span className="text-lg">Jl. H. Rais. A. Rachman Gg. Bukit Sebedang No.21, Sungai Jawi, Pontianak Kota</span>
                   </div>
                 </div>
               </div>

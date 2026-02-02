@@ -17,6 +17,7 @@ const NAV_LINKS = [
 export default function Navbar() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
@@ -64,15 +65,48 @@ export default function Navbar() {
               DPR Indonesia
             </span>
           </Link>
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-8">
             {NAV_LINKS.map(({ href, label }) => (
               <Link key={href} href={href} className={linkClass(href)}>
                 {label}
               </Link>
             ))}
           </div>
+          <button
+            type="button"
+            aria-label="Toggle menu"
+            onClick={() => setIsOpen((prev) => !prev)}
+            className="block lg:hidden text-white"
+          >
+            {isOpen ? (
+              <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
+          </button>
         </div>
       </div>
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="lg:hidden bg-primary shadow-md border-t border-white/10">
+          <div className="px-4 sm:px-6 lg:px-8 py-4 flex flex-col gap-4">
+            {NAV_LINKS.map(({ href, label }) => (
+              <Link
+                key={href}
+                href={href}
+                onClick={() => setIsOpen(false)}
+                className="text-sm font-medium uppercase tracking-wider text-white/90 hover:text-white transition"
+              >
+                {label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
     </nav>
   );
 }

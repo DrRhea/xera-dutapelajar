@@ -28,7 +28,7 @@ export default function FasilitasPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8">
             {/* Card 1 - Penginapan */}
-            <div className="bg-surface rounded-lg shadow-soft p-8 border border-gray-200 hover:shadow-md transition-shadow">
+            <div className="bg-white rounded-xl shadow-sm p-8 border border-gray-200 hover:shadow-md transition-shadow duration-300">
               <div className="flex flex-col space-y-4">
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                   <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -43,7 +43,7 @@ export default function FasilitasPage() {
             </div>
             
             {/* Card 2 - Relasi Pelajar */}
-            <div className="bg-surface rounded-lg shadow-soft p-8 border border-gray-200 hover:shadow-md transition-shadow">
+            <div className="bg-white rounded-xl shadow-sm p-8 border border-gray-200 hover:shadow-md transition-shadow duration-300">
               <div className="flex flex-col space-y-4">
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                   <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -58,7 +58,7 @@ export default function FasilitasPage() {
             </div>
             
             {/* Card 3 - Sertifikat dan Merchandise */}
-            <div className="bg-surface rounded-lg shadow-soft p-8 border border-gray-200 hover:shadow-md transition-shadow">
+            <div className="bg-white rounded-xl shadow-sm p-8 border border-gray-200 hover:shadow-md transition-shadow duration-300">
               <div className="flex flex-col space-y-4">
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                   <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -73,7 +73,7 @@ export default function FasilitasPage() {
             </div>
             
             {/* Card 4 - Perlengkapan Finalis */}
-            <div className="bg-surface rounded-lg shadow-soft p-8 border border-gray-200 hover:shadow-md transition-shadow">
+            <div className="bg-white rounded-xl shadow-sm p-8 border border-gray-200 hover:shadow-md transition-shadow duration-300">
               <div className="flex flex-col space-y-4">
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                   <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">

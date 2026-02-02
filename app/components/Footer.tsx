@@ -3,12 +3,12 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-primary text-white border-t border-gray-200 py-16 md:py-20 relative z-10">
+    <footer className="bg-primary text-white border-t border-gray-200 py-8 md:py-10 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Upper section - 5 columns */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 mb-12 md:mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-6 mb-6 md:mb-8">
           {/* Column 1 - Brand */}
-          <div className="lg:col-span-2 space-y-4">
+          <div className="lg:col-span-2 space-y-3">
             <div className="flex items-center gap-3">
               <Image
                 src="/assets/Duta_Pelajar_Remaja_Indonesia-removebg-preview.png"
@@ -31,7 +31,7 @@ export default function Footer() {
           </div>
 
           {/* Column 2 - Menu Utama */}
-          <div className="space-y-4">
+          <div className="space-y-3">
             <h4 className="font-bold text-white">Menu Utama</h4>
             <ul className="space-y-3 text-white/80 text-sm">
               <li><Link href="/" className="hover:text-accent transition">Beranda</Link></li>
@@ -44,7 +44,7 @@ export default function Footer() {
           </div>
 
           {/* Column 3 - Lainnya */}
-          <div className="space-y-4">
+          <div className="space-y-3">
             <h4 className="font-bold text-white">Lainnya</h4>
             <ul className="space-y-3 text-white/80 text-sm">
               <li><Link href="/unduhan" className="hover:text-accent transition">Pusat Unduhan</Link></li>
@@ -53,7 +53,7 @@ export default function Footer() {
           </div>
 
           {/* Column 4 - Program Kami */}
-          <div className="space-y-4">
+          <div className="space-y-3">
             <h4 className="font-bold text-white">Program Kami</h4>
             <ul className="space-y-3 text-white/80 text-sm">
               <li><Link href="/" className="hover:text-accent transition">Duta Pelajar Remaja Indonesia</Link></li>
@@ -61,7 +61,7 @@ export default function Footer() {
           </div>
 
           {/* Column 5 - Hubungi Kami */}
-          <div className="space-y-4">
+          <div className="space-y-3">
             <h4 className="font-bold text-white">Hubungi Kami</h4>
             <ul className="space-y-4 text-white/80 text-sm">
               <li className="flex items-center gap-3">
@@ -89,8 +89,8 @@ export default function Footer() {
         </div>
 
         {/* Bottom section */}
-        <div className="border-t border-white/10 pt-8 md:pt-10 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-white/70 text-sm order-2 sm:order-1">
+        <div className="border-t border-white/10 pt-4 md:pt-6 flex flex-col sm:flex-row justify-between items-center gap-3">
+          <p className="text-white/70 text-xs order-2 sm:order-1">
             © 2025 Pesona Prestasi Official. All rights reserved.
           </p>
           <div className="flex items-center gap-3 order-1 sm:order-2">

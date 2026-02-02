@@ -147,8 +147,8 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 md:p-8 rounded-lg flex flex-col border border-gray-200 shadow-soft">
-              <div className="aspect-video rounded-lg bg-gray-100 border border-gray-200 flex items-center justify-center mb-6">
+            <div className="bg-white p-6 md:p-8 rounded-xl flex flex-col border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300">
+              <div className="aspect-video rounded-xl bg-gray-100 border border-gray-200 flex items-center justify-center mb-6">
                 <span className="text-gray-400 text-sm">Gambar Jalur Undangan</span>
               </div>
               <span className="text-xs uppercase tracking-wider text-primary mb-2">Undangan</span>
@@ -158,8 +158,8 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="bg-white p-6 md:p-8 rounded-lg flex flex-col border border-gray-200 shadow-soft">
-              <div className="aspect-video rounded-lg bg-gray-100 border border-gray-200 flex items-center justify-center mb-6">
+            <div className="bg-white p-6 md:p-8 rounded-xl flex flex-col border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300">
+              <div className="aspect-video rounded-xl bg-gray-100 border border-gray-200 flex items-center justify-center mb-6">
                 <span className="text-gray-400 text-sm">Gambar Jalur Prestasi</span>
               </div>
               <span className="text-xs uppercase tracking-wider text-primary mb-2">Prestasi</span>
@@ -169,8 +169,8 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="bg-white p-6 md:p-8 rounded-lg flex flex-col border border-gray-200 shadow-soft">
-              <div className="aspect-video rounded-lg bg-gray-100 border border-gray-200 flex items-center justify-center mb-6">
+            <div className="bg-white p-6 md:p-8 rounded-xl flex flex-col border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300">
+              <div className="aspect-video rounded-xl bg-gray-100 border border-gray-200 flex items-center justify-center mb-6">
                 <span className="text-gray-400 text-sm">Gambar Jalur Mandiri</span>
               </div>
               <span className="text-xs uppercase tracking-wider text-primary mb-2">Mandiri</span>
@@ -211,7 +211,7 @@ export default function Home() {
                 <div className="flex-shrink-0 w-14 h-14 rounded-full bg-primary text-white font-bold text-xl flex items-center justify-center shadow-soft">
                   {item.num}
                 </div>
-                <div className="flex-1 bg-surface rounded-lg p-6 border border-gray-200 shadow-soft">
+                <div className="flex-1 bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-2">
                     <div>
                       <div className="text-xs font-semibold text-primary uppercase tracking-wide mb-1">{item.period}</div>
@@ -258,7 +258,7 @@ export default function Home() {
               { title: "Sertifikat", desc: "Sertifikat resmi dan merchandise eksklusif DPR Indonesia" },
               { title: "Perlengkapan", desc: "Kaos, pakaian forum, dan selempang resmi DPR Indonesia" },
             ].map((f) => (
-              <div key={f.title} className="bg-white rounded-lg p-8 flex flex-col items-center text-center space-y-4 border border-gray-200 shadow-soft">
+              <div key={f.title} className="bg-white rounded-xl p-8 flex flex-col items-center text-center space-y-4 border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300">
                 <h3 className="text-2xl font-bold text-text-dark">{f.title}</h3>
                 <p className="text-text-light">{f.desc}</p>
               </div>
@@ -289,7 +289,7 @@ export default function Home() {
               { title: "MPR/DPR RI", desc: "Kunjungan ke lembaga legislatif Indonesia untuk memahami proses demokrasi dan tata kelola negara." },
               { title: "Kemenpora", desc: "Kunjungan ke Kementerian Pemuda dan Olahraga untuk memahami kebijakan dan program kepemudaan nasional." },
             ].map((a) => (
-              <div key={a.title} className="bg-white rounded-lg overflow-hidden border border-gray-200 shadow-soft">
+              <div key={a.title} className="bg-white rounded-xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300">
                 <div className="aspect-video bg-gray-100 border-b border-gray-200 flex items-center justify-center">
                   <span className="text-gray-400 text-sm">Gambar</span>
                 </div>

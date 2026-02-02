@@ -28,7 +28,7 @@ export default function AgendaPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8">
             {/* Card 1 - Universitas Indonesia */}
-            <div className="bg-surface rounded-lg p-8 border border-gray-200 shadow-soft">
+            <div className="bg-white rounded-xl p-8 border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-20 h-20 bg-primary/10 border-4 border-primary flex items-center justify-center rounded-full">
                   <span className="text-primary text-xs font-bold">UI</span>
@@ -41,7 +41,7 @@ export default function AgendaPage() {
             </div>
 
             {/* Card 2 - MPR/DPR RI */}
-            <div className="bg-surface rounded-lg p-8 border border-gray-200 shadow-soft">
+            <div className="bg-white rounded-xl p-8 border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-20 h-20 bg-primary/10 border-4 border-primary flex items-center justify-center rounded-full">
                   <span className="text-primary text-xs font-bold">MPR</span>
@@ -54,7 +54,7 @@ export default function AgendaPage() {
             </div>
 
             {/* Card 3 - Kemenpora */}
-            <div className="bg-surface rounded-lg p-8 border border-gray-200 shadow-soft">
+            <div className="bg-white rounded-xl p-8 border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-20 h-20 bg-primary/10 border-4 border-primary flex items-center justify-center rounded-full">
                   <span className="text-primary text-xs font-bold">KP</span>
@@ -67,7 +67,7 @@ export default function AgendaPage() {
             </div>
 
             {/* Card 4 - Placeholder untuk card keempat jika diperlukan */}
-            <div className="bg-surface rounded-lg p-8 border border-gray-200 shadow-soft">
+            <div className="bg-white rounded-xl p-8 border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-20 h-20 bg-primary/10 border-4 border-primary flex items-center justify-center rounded-full">
                   <span className="text-primary text-xs font-bold">PG</span>
