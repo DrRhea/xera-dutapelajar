@@ -72,24 +72,26 @@ export default function TentangKamiPage() {
               </div>
             </div>
 
-            <div className="bg-white p-8 space-y-6 rounded-lg border border-gray-200 shadow-soft">
-              <h3 className="text-3xl font-bold text-primary">Visi</h3>
-              <p className="text-lg text-text-light leading-relaxed">
-                Menjadi program unggulan dalam pembinaan karakter, pengembangan potensi, dan pemberdayaan pelajar remaja Indonesia yang berorientasi pada terwujudnya Indonesia Emas 2045.
-              </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+              <div className="bg-white p-8 space-y-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <h3 className="text-3xl font-bold text-primary">Visi</h3>
+                <p className="text-lg text-text-light leading-relaxed">
+                  Menjadi program unggulan dalam pembinaan karakter, pengembangan potensi, dan pemberdayaan pelajar remaja Indonesia yang berorientasi pada terwujudnya Indonesia Emas 2045.
+                </p>
+              </div>
+
+              <div className="bg-white p-8 space-y-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <h3 className="text-3xl font-bold text-primary">Misi</h3>
+                <ul className="space-y-4 text-lg text-text-light leading-relaxed list-disc list-inside">
+                  <li>Menyediakan wadah strategis bagi pelajar remaja untuk menyalurkan bakat, meningkatkan kemampuan kepemimpinan, keterampilan sosial, serta rasa tanggung jawab.</li>
+                  <li>Mengembangkan proses pembinaan yang menekankan penguatan kapasitas diri, penguatan karakter, dan kolaborasi positif.</li>
+                  <li>Menyiapkan generasi muda yang cerdas, kreatif, berintegritas, dan mampu menjadi teladan bagi rekan sebaya.</li>
+                  <li>Mendukung terwujudnya generasi unggul, berkarakter, dan siap menjadi pemimpin masa depan bangsa yang berkontribusi nyata bagi kemajuan negeri.</li>
+                </ul>
+              </div>
             </div>
 
-            <div className="bg-white p-8 space-y-6 rounded-lg border border-gray-200 shadow-soft">
-              <h3 className="text-3xl font-bold text-primary">Misi</h3>
-              <ul className="space-y-4 text-lg text-text-light leading-relaxed list-disc list-inside">
-                <li>Menyediakan wadah strategis bagi pelajar remaja untuk menyalurkan bakat, meningkatkan kemampuan kepemimpinan, keterampilan sosial, serta rasa tanggung jawab.</li>
-                <li>Mengembangkan proses pembinaan yang menekankan penguatan kapasitas diri, penguatan karakter, dan kolaborasi positif.</li>
-                <li>Menyiapkan generasi muda yang cerdas, kreatif, berintegritas, dan mampu menjadi teladan bagi rekan sebaya.</li>
-                <li>Mendukung terwujudnya generasi unggul, berkarakter, dan siap menjadi pemimpin masa depan bangsa yang berkontribusi nyata bagi kemajuan negeri.</li>
-              </ul>
-            </div>
-
-            <div className="bg-white p-8 space-y-6 rounded-lg border border-gray-200 shadow-soft">
+            <div className="bg-white p-8 space-y-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300">
               <h3 className="text-3xl font-bold text-primary">Nilai-Nilai Program</h3>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
@@ -126,7 +128,7 @@ export default function TentangKamiPage() {
               </div>
             </div>
             
-            <div className="bg-surface p-8 space-y-6 rounded-lg border border-gray-200 shadow-soft">
+            <div className="bg-white p-8 space-y-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300">
               <h3 className="text-2xl font-bold text-primary">CV. Pesona Prestasi Official</h3>
               <p className="text-base md:text-lg text-text-light leading-relaxed">
                 Program Duta Pelajar Remaja Indonesia diselenggarakan di bawah naungan CV. Pesona Prestasi Official. Organisasi ini berkomitmen untuk mengembangkan potensi terbaik remaja Indonesia melalui program kompetisi dan pengembangan karakter yang terstruktur, profesional, dan berorientasi pada pembinaan generasi muda yang unggul, kreatif, dan berkarakter.
@@ -148,7 +150,7 @@ export default function TentangKamiPage() {
               </div>
             </div>
             
-            <div className="bg-white border-2 border-primary rounded-lg p-8 md:p-10 space-y-6">
+            <div className="bg-white w-full p-8 md:p-10 space-y-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300">
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold text-primary">CV. Pesona Prestasi Official</h3>
                 <div className="space-y-3 text-text-dark">
@@ -170,7 +172,7 @@ export default function TentangKamiPage() {
       {/* Download Pedoman Section */}
       <section className="py-20 bg-surface">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-lg shadow-soft p-8 md:p-12 text-center border border-gray-200">
+          <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 p-8 md:p-12 text-center border border-gray-200">
             <div className="mb-6">
               <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">

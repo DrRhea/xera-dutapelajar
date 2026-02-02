@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className="min-h-screen relative bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex flex-col overflow-hidden z-10 bg-primary">
+      <section className="relative min-h-screen flex flex-col overflow-hidden z-10 bg-primary py-16 md:py-20">
         <div className="absolute inset-0 z-0">
           <Image
             src="/assets/muhammad-ravel-P5d3B3oZLqw-unsplash.jpg"
@@ -33,14 +33,14 @@ export default function Home() {
               <div className="flex flex-wrap gap-4 mt-10">
                 <Link
                   href="#daftar"
-                  className="px-6 py-3.5 bg-white text-primary text-sm font-semibold uppercase tracking-wider rounded-lg hover:bg-gray-100 transition shadow-soft"
+                  className="inline-flex items-center justify-center px-8 py-3 bg-white text-primary text-base font-semibold rounded-xl hover:bg-gray-100 transition shadow-sm"
                 >
                   Daftar Sekarang
                 </Link>
                 <a
                   href="/documents/Pedoman-DPRI-2026.pdf"
                   download="Pedoman-DPRI-2026.pdf"
-                  className="px-6 py-3.5 bg-transparent text-white text-sm font-semibold uppercase tracking-wider rounded-lg border border-white/30 hover:bg-white/10 transition inline-flex items-center gap-2"
+                  className="inline-flex items-center justify-center px-8 py-3 bg-transparent text-white text-base font-semibold rounded-xl border border-white/30 hover:bg-white/10 transition gap-2"
                 >
                   <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -75,7 +75,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="relative z-10 py-24 md:py-32 bg-white">
+      <section id="about" className="relative z-10 py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 md:gap-16 lg:gap-20 items-center">
             <div className="space-y-6">
@@ -95,7 +95,7 @@ export default function Home() {
               </div>
               <Link
                 href="/tentang-kami"
-                className="inline-block px-6 py-3.5 bg-primary text-white text-sm font-semibold uppercase tracking-wider rounded-lg hover:bg-red-900 transition shadow-soft"
+                className="inline-flex items-center justify-center px-8 py-3 bg-primary text-white text-base font-semibold rounded-xl hover:bg-red-900 transition shadow-sm"
               >
                 Selengkapnya
               </Link>
@@ -131,7 +131,7 @@ export default function Home() {
       </section>
 
       {/* Jalur Pendaftaran */}
-      <section id="pendaftaran" className="relative z-10 py-24 md:py-32 bg-surface">
+      <section id="pendaftaran" className="relative z-10 py-16 md:py-20 bg-surface">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 space-y-4">
             <div className="inline-block w-16 h-0.5 bg-primary" />
@@ -184,7 +184,7 @@ export default function Home() {
       </section>
 
       {/* Timeline Preview */}
-      <section id="timeline" className="relative z-10 py-24 md:py-32 bg-white">
+      <section id="timeline" className="relative z-10 py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 space-y-4">
             <div className="inline-block w-16 h-0.5 bg-primary" />
@@ -228,7 +228,7 @@ export default function Home() {
           <div className="text-center mt-16">
             <Link
               href="/timeline"
-              className="inline-block px-6 py-3.5 bg-primary text-white text-sm font-semibold uppercase tracking-wider hover:bg-red-900 transition rounded-lg shadow-soft"
+              className="inline-flex items-center justify-center px-8 py-3 bg-primary text-white text-base font-semibold hover:bg-red-900 transition rounded-xl shadow-sm"
             >
               Lihat Timeline Lengkap
             </Link>
@@ -237,7 +237,7 @@ export default function Home() {
       </section>
 
       {/* Fasilitas */}
-      <section id="fasilitas" className="relative z-10 py-24 md:py-32 bg-surface">
+      <section id="fasilitas" className="relative z-10 py-16 md:py-20 bg-surface">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 space-y-4">
             <p className="text-sm uppercase tracking-wider text-text-light">
@@ -268,7 +268,7 @@ export default function Home() {
       </section>
 
       {/* Agenda */}
-      <section id="agenda" className="relative z-10 py-24 md:py-32 bg-white">
+      <section id="agenda" className="relative z-10 py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 space-y-4">
             <div className="inline-block w-16 h-0.5 bg-primary" />
@@ -305,7 +305,7 @@ export default function Home() {
       </section>
 
       {/* CTA Final */}
-      <section id="daftar" className="relative z-10 py-24 md:py-32 bg-white">
+      <section id="daftar" className="relative z-10 py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="bg-surface rounded-lg p-12 md:p-16 max-w-4xl mx-auto space-y-8 border border-gray-200 shadow-soft">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-text-dark leading-tight">
@@ -317,14 +317,14 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 href="#"
-                className="px-8 py-4 bg-primary text-white text-lg font-semibold hover:bg-red-900 transition rounded-lg shadow-soft"
+                className="inline-flex items-center justify-center px-8 py-3 bg-primary text-white text-base font-semibold hover:bg-red-900 transition rounded-xl shadow-sm"
               >
                 DAFTAR SEKARANG
               </Link>
               <a
                 href="/documents/Pedoman-DPRI-2026.pdf"
                 download="Pedoman-DPRI-2026.pdf"
-                className="px-8 py-4 bg-transparent text-primary text-lg font-semibold hover:bg-gray-100 transition border border-primary rounded-lg inline-flex items-center gap-2"
+                className="inline-flex items-center justify-center px-8 py-3 bg-transparent text-primary text-base font-semibold hover:bg-gray-100 transition border border-primary rounded-xl gap-2"
               >
                 <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
