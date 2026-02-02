@@ -4,9 +4,9 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="min-h-screen">
-      {/* Hero Section */}
+      {/* Hero Section - Minimalist */}
       <section className="relative min-h-screen flex flex-col overflow-hidden">
-        {/* Background Image */}
+        {/* Background Image + Dark Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
             src="/assets/muhammad-ravel-P5d3B3oZLqw-unsplash.jpg"
@@ -15,85 +15,80 @@ export default function Home() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-tinkerbell-secondary/60"></div>
+          <div className="absolute inset-0 bg-black/60"></div>
+          <div className="absolute inset-0 bg-tinkerbell-secondary/40"></div>
         </div>
-        
-        {/* Navigation */}
-        <nav className="relative z-10 w-full bg-transparent">
+
+        {/* Navigation - Logo left, Links right */}
+        <nav className="relative z-10 w-full">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-20">
-              {/* Logo - Left */}
-              <div className="flex items-center space-x-3">
-                <Link href="#" className="flex items-center space-x-3">
-                  <Image
-                    src="/assets/Duta_Pelajar_Remaja_Indonesia-removebg-preview.png"
-                    alt="DPR Indonesia Logo"
-                    width={50}
-                    height={50}
-                    className="object-contain"
-                    priority
-                  />
-                  <span className="text-xl font-bold text-white hidden sm:block">
-                    DPR Indonesia
-                  </span>
+              <Link href="/" className="flex items-center gap-3">
+                <Image
+                  src="/assets/Duta_Pelajar_Remaja_Indonesia-removebg-preview.png"
+                  alt="DPR Indonesia Logo"
+                  width={44}
+                  height={44}
+                  className="object-contain"
+                  priority
+                />
+                <span className="text-white font-semibold text-sm uppercase tracking-wide hidden sm:block">
+                  DPR Indonesia
+                </span>
+              </Link>
+              <div className="hidden md:flex items-center gap-8">
+                <Link href="/" className="text-white text-sm font-medium uppercase tracking-wider border-b-2 border-white pb-0.5">
+                  Beranda
                 </Link>
-              </div>
-              
-              {/* Navigation Links - Center */}
-              <div className="hidden md:flex items-center space-x-10">
-                <Link href="/tentang-kami" className="text-white hover:text-tinkerbell-cta transition font-medium text-base">
-                  Tentang Kami
+                <Link href="/tentang-kami" className="text-white/90 hover:text-white text-sm font-medium uppercase tracking-wider transition">
+                  Tentang
                 </Link>
-                <Link href="/timeline" className="text-white hover:text-tinkerbell-cta transition font-medium text-base">
-                  Timeline
+                <Link href="/timeline" className="text-white/90 hover:text-white text-sm font-medium uppercase tracking-wider transition">
+                  Program
                 </Link>
-                <Link href="/fasilitas" className="text-white hover:text-tinkerbell-cta transition font-medium text-base">
+                <Link href="/fasilitas" className="text-white/90 hover:text-white text-sm font-medium uppercase tracking-wider transition">
                   Fasilitas
                 </Link>
-                <Link href="/agenda" className="text-white hover:text-tinkerbell-cta transition font-medium text-base">
+                <Link href="/agenda" className="text-white/90 hover:text-white text-sm font-medium uppercase tracking-wider transition">
                   Agenda
                 </Link>
+                <a href="https://instagram.com/dpr_indonesia.official" target="_blank" rel="noopener noreferrer" className="text-white/90 hover:text-white text-sm font-medium uppercase tracking-wider transition">
+                  Kontak
+                </a>
               </div>
             </div>
           </div>
         </nav>
 
-        {/* Hero Content */}
-        <div className="relative z-10 flex-1 flex items-center justify-center">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white font-[var(--font-plus-jakarta-sans)]">
-            <div className="space-y-6">
-              <div className="space-y-3">
-                <h1 className="text-3xl md:text-5xl leading-tight">
-                  Duta Pelajar Remaja Indonesia
-                </h1>
-                <h2 className="text-2xl md:text-3xl font-normal text-white">
-                  2026
-                </h2>
-              </div>
-              
-              <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
-                "Remaja hebat, cerdas dan berkualitas"
+        {/* Hero Content - Left aligned, minimal */}
+        <div className="relative z-10 flex-1 flex items-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div className="max-w-2xl">
+              <p className="text-white/80 text-xs uppercase tracking-[0.2em] mb-4">
+                CV. Pesona Prestasi Official
               </p>
-              <p className="text-base md:text-lg text-white/80 max-w-3xl mx-auto mt-2">
-                Wujudkan Perubahan Positif, Jadilah Generasi Emas 2045
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight">
+                Remaja Hebat,<br />Cerdas dan Berkualitas
+              </h1>
+              <p className="text-white/90 text-base md:text-lg mt-6 max-w-xl leading-relaxed">
+                Wadah strategis bagi pelajar Indonesia untuk mengembangkan potensi, kepemimpinan, dan karakter—menuju Generasi Emas 2045.
               </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
+              <div className="flex flex-wrap gap-4 mt-10">
                 <Link
                   href="#daftar"
-                  className="px-8 py-4 bg-tinkerbell-cta text-white text-lg font-semibold hover:opacity-90 transition"
+                  className="px-6 py-3.5 bg-tinkerbell-bg text-tinkerbell-secondary text-sm font-semibold uppercase tracking-wider rounded-md hover:bg-white/95 transition"
                 >
-                  DAFTAR SEKARANG
+                  Daftar Sekarang
                 </Link>
                 <a
                   href="/documents/Pedoman-DPRI-2026.pdf"
                   download="Pedoman-DPRI-2026.pdf"
-                  className="px-8 py-4 bg-white/20 text-white text-lg font-semibold hover:bg-white/30 transition border-2 border-white/50 inline-flex items-center gap-2"
+                  className="px-6 py-3.5 bg-transparent text-white text-sm font-semibold uppercase tracking-wider rounded-md border border-white/80 hover:bg-white/10 transition inline-flex items-center gap-2"
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
-                  UNDUH PEDOMAN DPRI 2026 (PDF)
+                  Unduh Pedoman
                 </a>
               </div>
             </div>
@@ -101,26 +96,57 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="py-32 bg-tinkerbell-bg">
+      {/* About Section - Two column layout */}
+      <section id="about" className="py-20 md:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto space-y-8">
-            <h2 className="text-4xl md:text-5xl font-bold text-tinkerbell-text leading-tight text-center">
-              Tentang Duta Pelajar Remaja Indonesia
-            </h2>
-            
-            <div className="space-y-6 text-lg text-tinkerbell-textSecondary leading-relaxed">
-              <p>
-                Duta Pelajar Remaja Indonesia merupakan wadah strategis bagi pelajar tingkat SMP/MTs Sederajat dan SMA/SMK/MA Sederajat untuk menyalurkan bakat, meningkatkan kemampuan kepemimpinan, keterampilan sosial, serta rasa tanggung jawab. Melalui program ini, peserta tidak hanya mengikuti ajang kompetisi, tetapi juga menjalani proses pembinaan yang menekankan pengembangan kapasitas diri, penguatan karakter, dan kolaborasi positif.
+          <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left column - Text */}
+            <div>
+              <p className="text-xs uppercase tracking-[0.2em] text-tinkerbell-textSecondary mb-4">
+                Tentang Kami
               </p>
-              
-              <p>
-                Program ini menjadi sarana strategis untuk menyiapkan generasi muda yang cerdas, kreatif, dan berintegritas, serta mampu menjadi teladan bagi rekan sebaya. Setiap kegiatan dalam Duta Pelajar Remaja Indonesia dirancang untuk memberikan kesempatan bagi pelajar dan remaja Indonesia menampilkan potensi terbaiknya di berbagai bidang, baik akademik, seni, kepemimpinan, maupun sosial.
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-tinkerbell-text leading-tight mb-6">
+                Memberi Panggung bagi Talenta dan Prestasi Pelajar Indonesia
+              </h2>
+              <p className="text-tinkerbell-textSecondary leading-relaxed mb-5">
+                Duta Pelajar Remaja Indonesia adalah wadah strategis bagi pelajar SMP/MTs dan SMA/SMK/MA Sederajat untuk menyalurkan bakat, meningkatkan kepemimpinan, keterampilan sosial, serta rasa tanggung jawab. Program ini tidak hanya ajang kompetisi, tetapi proses pembinaan yang menekankan pengembangan kapasitas diri, penguatan karakter, dan kolaborasi positif.
               </p>
-              
-              <p>
-                Seluruh program yang dijalankan oleh Duta Pelajar Remaja Indonesia diarahkan untuk mendukung visi besar Indonesia Emas 2045, dengan tujuan mewujudkan generasi unggul, berkarakter, dan siap menjadi pemimpin masa depan bangsa yang berkontribusi nyata bagi kemajuan negeri.
+              <p className="text-tinkerbell-textSecondary leading-relaxed mb-8">
+                Kami berkomitmen menyiapkan generasi muda yang cerdas, kreatif, dan berintegritas—mampu menjadi teladan bagi rekan sebaya. Seluruh program diarahkan untuk mendukung visi Indonesia Emas 2045 dan mewujudkan generasi unggul yang siap berkontribusi bagi kemajuan negeri.
               </p>
+              <Link
+                href="/tentang-kami"
+                className="inline-block px-6 py-3.5 bg-tinkerbell-secondary text-white text-sm font-semibold uppercase tracking-wider rounded-md hover:opacity-90 transition"
+              >
+                Selengkapnya
+              </Link>
+            </div>
+
+            {/* Right column - Image + Stats */}
+            <div>
+              <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-gray-100 mb-6">
+                <Image
+                  src="/assets/muhammad-ravel-P5d3B3oZLqw-unsplash.jpg"
+                  alt="Duta Pelajar Remaja Indonesia"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+              <div className="flex gap-8 md:gap-12">
+                <div>
+                  <p className="text-4xl md:text-5xl font-bold text-tinkerbell-text">5</p>
+                  <p className="text-xs uppercase tracking-wider text-tinkerbell-textSecondary mt-1">
+                    Tahapan Program
+                  </p>
+                </div>
+                <div>
+                  <p className="text-4xl md:text-5xl font-bold text-tinkerbell-text">250+</p>
+                  <p className="text-xs uppercase tracking-wider text-tinkerbell-textSecondary mt-1">
+                    Target Peserta
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
