@@ -3,15 +3,15 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-primary text-white border-t border-gray-200 py-8 md:py-10 relative z-10">
+    <footer className="bg-primary text-white border-t border-gray-200 py-8 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Upper section - 5 columns */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-6 mb-6 md:mb-8">
+        {/* Upper section - 4 columns */}
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
           {/* Column 1 - Brand */}
-          <div className="lg:col-span-2 space-y-3">
+          <div className="space-y-3">
             <div className="flex items-center gap-3">
               <Image
-                src="/assets/Duta_Pelajar_Remaja_Indonesia-removebg-preview.png"
+                src="/images/logo-dpr-official.png"
                 alt="DPR Indonesia"
                 width={48}
                 height={48}
@@ -19,21 +19,21 @@ export default function Footer() {
               />
               <div>
                 <p className="font-bold text-lg text-white">Duta Pelajar Remaja Indonesia</p>
-                <p className="text-white/70 text-sm">Program Pesona Prestasi Official</p>
+                <p className="text-gray-200 text-base">Program Pesona Prestasi Official</p>
               </div>
             </div>
-            <p className="text-white/80 text-sm leading-relaxed">
+            <p className="text-gray-200 text-base leading-relaxed">
               Organisasi penyelenggara program untuk mengembangkan potensi dan prestasi pelajar remaja di Indonesia, dengan tujuan mendukung tercapainya Indonesia Emas 2045.
             </p>
-            <div className="text-white/60 text-xs space-y-1">
+            <div className="text-gray-200 text-base">
               <p>Kantor: Jl. H. Rais. A. Rachman Gg. Bukit Sebedang No.21, Sungai Jawi, Pontianak</p>
             </div>
           </div>
 
           {/* Column 2 - Menu Utama */}
           <div className="space-y-3">
-            <h4 className="font-bold text-white">Menu Utama</h4>
-            <ul className="space-y-3 text-white/80 text-sm">
+            <h4 className="text-lg font-bold text-white">Menu Utama</h4>
+            <ul className="space-y-2 text-gray-200 text-base">
               <li><Link href="/" className="hover:text-accent transition">Beranda</Link></li>
               <li><Link href="/tentang-kami" className="hover:text-accent transition">Tentang Kami</Link></li>
               <li><Link href="/agenda" className="hover:text-accent transition">Event & Kegiatan</Link></li>
@@ -43,42 +43,35 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3 - Lainnya */}
+          {/* Column 3 - Informasi & Program */}
           <div className="space-y-3">
-            <h4 className="font-bold text-white">Lainnya</h4>
-            <ul className="space-y-3 text-white/80 text-sm">
+            <h4 className="text-lg font-bold text-white">Informasi & Program</h4>
+            <ul className="space-y-2 text-gray-200 text-base">
               <li><Link href="/unduhan" className="hover:text-accent transition">Pusat Unduhan</Link></li>
               <li><a href="/documents/Pedoman-DPRI-2026.pdf" download="Pedoman-DPRI-2026.pdf" className="hover:text-accent transition">Pedoman DPRI 2026</a></li>
-            </ul>
-          </div>
-
-          {/* Column 4 - Program Kami */}
-          <div className="space-y-3">
-            <h4 className="font-bold text-white">Program Kami</h4>
-            <ul className="space-y-3 text-white/80 text-sm">
               <li><Link href="/" className="hover:text-accent transition">Duta Pelajar Remaja Indonesia</Link></li>
             </ul>
           </div>
 
-          {/* Column 5 - Hubungi Kami */}
+          {/* Column 4 - Hubungi Kami */}
           <div className="space-y-3">
-            <h4 className="font-bold text-white">Hubungi Kami</h4>
-            <ul className="space-y-4 text-white/80 text-sm">
-              <li className="flex items-center gap-3">
-                <span className="flex-shrink-0 w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-accent">
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <h4 className="text-lg font-bold text-white">Hubungi Kami</h4>
+            <ul className="space-y-2 text-gray-200 text-base">
+              <li className="flex items-center gap-2">
+                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-accent">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
                 </span>
                 <a href="tel:+6282148538720" className="hover:text-accent transition">+62 821-4853-8720</a>
               </li>
-              <li className="flex items-center gap-3">
-                <span className="flex-shrink-0 w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-accent">
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              <li className="flex items-center gap-2">
+                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-accent">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
                 </span>
                 <a href="mailto:dprindonesia.official@gmail.com" className="hover:text-accent transition break-all">dprindonesia.official@gmail.com</a>
               </li>
-              <li className="flex items-center gap-3">
-                <span className="flex-shrink-0 w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-accent">
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.766 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              <li className="flex items-center gap-2">
+                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-accent">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.766 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
                 </span>
                 <a href="https://instagram.com/dpr_indonesia.official" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition">
                   @dpr_indonesia.official
@@ -89,8 +82,8 @@ export default function Footer() {
         </div>
 
         {/* Bottom section */}
-        <div className="border-t border-white/10 pt-4 md:pt-6 flex flex-col sm:flex-row justify-between items-center gap-3">
-          <p className="text-white/70 text-xs order-2 sm:order-1">
+        <div className="border-t border-white/10 mt-12 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3">
+          <p className="text-white/70 text-sm order-2 sm:order-1">
             © 2025 Pesona Prestasi Official. All rights reserved.
           </p>
           <div className="flex items-center gap-3 order-1 sm:order-2">
