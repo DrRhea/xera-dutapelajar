@@ -1,5 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import {
+  BuildingOffice2Icon,
+  MapIcon,
+  TrophyIcon,
+  AcademicCapIcon,
+  UserGroupIcon,
+  DocumentCheckIcon,
+} from "@heroicons/react/24/outline";
 
 export default function Home() {
   return (
@@ -173,18 +181,16 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { title: "Penginapan Premium", desc: "Karantina 5 hari 4 malam di hotel representatif.", icon: "M3 12l2-2m0 0l7-7 7 7" },
-              { title: "City Tour Edukatif", desc: "Kunjungan institusi strategis untuk wawasan nasional.", icon: "M9 20l-5.447-2.724A2 2 0 013 15.382V5a2 2 0 012-2h14a2 2 0 012 2v10.382a2 2 0 01-1.553 1.894L15 20v-5H9v5z" },
-              { title: "Atribut Resmi", desc: "Selempang, kostum, dan perlengkapan formal finalis.", icon: "M5 3v4M3 5h4M6 17v4m-2-2h4" },
-              { title: "Pembinaan Karakter", desc: "Kelas kepemimpinan dan etika publik berstandar nasional.", icon: "M9 12l2 2 4-4" },
-              { title: "Relasi Nasional", desc: "Jejaring pelajar unggul dari berbagai provinsi.", icon: "M17 20h5v-2a3 3 0 00-5.356-1.857" },
-              { title: "Sertifikat Resmi", desc: "Sertifikat nasional sebagai pengakuan prestasi.", icon: "M12 10v6m0 0l-3-3m3 3l3-3" },
+              { title: "Penginapan Premium", desc: "Karantina 5 hari 4 malam di hotel representatif.", Icon: BuildingOffice2Icon },
+              { title: "City Tour Edukatif", desc: "Kunjungan institusi strategis untuk wawasan nasional.", Icon: MapIcon },
+              { title: "Atribut Resmi", desc: "Selempang, kostum, dan perlengkapan formal finalis.", Icon: TrophyIcon },
+              { title: "Pembinaan Karakter", desc: "Kelas kepemimpinan dan etika publik berstandar nasional.", Icon: AcademicCapIcon },
+              { title: "Relasi Nasional", desc: "Jejaring pelajar unggul dari berbagai provinsi.", Icon: UserGroupIcon },
+              { title: "Sertifikat Resmi", desc: "Sertifikat nasional sebagai pengakuan prestasi.", Icon: DocumentCheckIcon },
             ].map((benefit) => (
               <div key={benefit.title} className="bg-white rounded-xl p-8 border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={benefit.icon} />
-                  </svg>
+                  <benefit.Icon className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="text-xl font-bold text-text-dark mb-2">{benefit.title}</h3>
                 <p className="text-text-light">{benefit.desc}</p>
