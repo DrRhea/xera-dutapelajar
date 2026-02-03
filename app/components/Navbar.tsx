@@ -54,7 +54,7 @@ export default function Navbar() {
             className="flex items-center gap-3"
           >
             <Image
-              src="/assets/Duta_Pelajar_Remaja_Indonesia-removebg-preview.png"
+              src="/images/logo-dpr-official.png"
               alt="DPR Indonesia Logo"
               width={36}
               height={36}

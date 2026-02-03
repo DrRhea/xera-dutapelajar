@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     siteName: "Duta Pelajar Remaja Indonesia",
     images: [
       {
-        url: "/assets/Duta_Pelajar_Remaja_Indonesia-removebg-preview.png",
+        url: "/images/logo-dpr-official.png",
         width: 1200,
         height: 630,
         alt: "Logo Duta Pelajar Remaja Indonesia",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Duta Pelajar Remaja Indonesia Tahun 2026",
     description: "Remaja hebat, cerdas dan berkualitas - Wujudkan Perubahan Positif, Jadilah Generasi Emas 2045",
-    images: ["/assets/Duta_Pelajar_Remaja_Indonesia-removebg-preview.png"],
+    images: ["/images/logo-dpr-official.png"],
     creator: "@dpr_indonesia.official",
   },
   robots: {
@@ -72,11 +72,11 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/assets/Duta_Pelajar_Remaja_Indonesia-removebg-preview.png', sizes: 'any' },
-      { url: '/assets/Duta_Pelajar_Remaja_Indonesia-removebg-preview.png', type: 'image/png' },
+      { url: '/images/logo-dpr-official.png', sizes: 'any' },
+      { url: '/images/logo-dpr-official.png', type: 'image/png' },
     ],
     apple: [
-      { url: '/assets/Duta_Pelajar_Remaja_Indonesia-removebg-preview.png' },
+      { url: '/images/logo-dpr-official.png' },
     ],
   },
   verification: {

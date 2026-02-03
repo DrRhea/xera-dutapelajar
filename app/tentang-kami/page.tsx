@@ -116,6 +116,39 @@ export default function TentangKamiPage() {
         </div>
       </section>
 
+      {/* Sambutan Founder */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto space-y-8">
+            <div className="text-center mb-8">
+              <div className="flex items-center justify-center gap-4 mb-4">
+                <div className="flex-1 h-0.5 bg-primary"></div>
+                <div className="text-sm uppercase tracking-wider text-text-light">SAMBUTAN FOUNDER</div>
+                <div className="flex-1 h-0.5 bg-primary"></div>
+              </div>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col md:flex-row items-center gap-8">
+              <div className="relative w-40 h-40 rounded-xl overflow-hidden border border-gray-200">
+                <Image
+                  src="/images/people/founder-saputra.jpg"
+                  alt="Saputra"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="space-y-2 text-center md:text-left">
+                <h3 className="text-2xl font-bold text-text-dark">Saputra</h3>
+                <p className="text-sm font-semibold text-primary">Founder Duta Pelajar Remaja Indonesia</p>
+                <p className="text-text-light leading-relaxed">
+                  Kami berkomitmen membangun ekosistem pembinaan pelajar yang berkarakter, berprestasi, dan siap menjadi agen perubahan. Terima kasih atas dukungan semua pihak yang terus memperkuat misi kami menuju Indonesia Emas 2045.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Landasan Operasional Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
