@@ -1,3 +1,5 @@
+import PedomanPreview from "./PedomanPreview";
+
 export default function UnduhanPage() {
   return (
     <main className="min-h-screen bg-white">
@@ -23,30 +25,8 @@ export default function UnduhanPage() {
       {/* Download List */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-surface border border-gray-200 rounded-lg p-8 shadow-soft">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-text-dark">Pedoman DPRI 2026</h3>
-                  <p className="text-text-light text-sm">Dokumen resmi program</p>
-                </div>
-              </div>
-              <p className="text-text-light mb-6">
-                Buku pedoman resmi Duta Pelajar Remaja Indonesia Edisi 2025/2026.
-              </p>
-              <a
-                href="/documents/Pedoman-DPRI-2026.pdf"
-                download="Pedoman-DPRI-2026.pdf"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white text-sm font-semibold rounded-lg hover:opacity-90 transition"
-              >
-                Unduh Pedoman (PDF)
-              </a>
-            </div>
+          <div className="grid grid-cols-1 gap-8">
+            <PedomanPreview />
 
             <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-soft">
               <div className="flex items-center gap-4 mb-4">
