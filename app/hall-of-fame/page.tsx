@@ -130,9 +130,6 @@ export default function HallOfFamePage() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-dark leading-tight">
               Pemenang 2025
             </h2>
-            <p className="text-text-light mt-4 max-w-2xl mx-auto">
-              Pelajar terbaik yang berhasil menjadi juara pada gelaran Duta Pelajar Remaja Indonesia 2025
-            </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
@@ -183,9 +180,6 @@ export default function HallOfFamePage() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-dark leading-tight">
               Momen Bersejarah
             </h2>
-            <p className="text-text-light mt-4 max-w-2xl mx-auto">
-              Saksikan momen kebanggaan dan prestasi para pemenang
-            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
