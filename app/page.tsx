@@ -29,7 +29,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="max-w-2xl">
               <p className="text-white/70 text-xs uppercase tracking-[0.2em] mb-4">
-                CV. Pesona Prestasi Official
+                Duta Pelajar Remaja Indonesia
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight">
                 Remaja Hebat, Cerdas &amp; Berkualitas
