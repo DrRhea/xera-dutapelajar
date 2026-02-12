@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 
 const NAV_LINKS = [
   { href: "/", label: "Beranda" },
+  { href: "/hall-of-fame", label: "Hall of Fame" },
   { href: "/tentang-kami", label: "Tentang Kami" },
   { href: "/agenda", label: "Event & Kegiatan" },
   { href: "/fasilitas", label: "Fasilitas" },
