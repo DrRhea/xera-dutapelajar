@@ -30,8 +30,8 @@ export default function AgendaPage() {
             {/* Card 1 - Universitas Indonesia */}
             <div className="bg-white rounded-xl p-8 border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300">
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-20 h-20 bg-primary/10 border-4 border-primary flex items-center justify-center rounded-full">
-                  <span className="text-primary text-xs font-bold">UI</span>
+                <div className="w-20 h-20 flex items-center justify-center">
+                  <Image src="/images/logo-ui.svg" alt="Universitas Indonesia" width={80} height={80} />
                 </div>
                 <h3 className="text-2xl font-bold text-text-dark">Universitas Indonesia</h3>
               </div>
@@ -43,8 +43,8 @@ export default function AgendaPage() {
             {/* Card 2 - MPR/DPR RI */}
             <div className="bg-white rounded-xl p-8 border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300">
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-20 h-20 bg-primary/10 border-4 border-primary flex items-center justify-center rounded-full">
-                  <span className="text-primary text-xs font-bold">MPR</span>
+                <div className="w-20 h-20 flex items-center justify-center">
+                  <Image src="/images/logo-mpr.svg" alt="MPR/DPR RI" width={80} height={80} />
                 </div>
                 <h3 className="text-2xl font-bold text-text-dark">MPR/DPR RI</h3>
               </div>
@@ -56,8 +56,8 @@ export default function AgendaPage() {
             {/* Card 3 - Kemenpora */}
             <div className="bg-white rounded-xl p-8 border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300">
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-20 h-20 bg-primary/10 border-4 border-primary flex items-center justify-center rounded-full">
-                  <span className="text-primary text-xs font-bold">KP</span>
+                <div className="w-20 h-20 flex items-center justify-center">
+                  <Image src="/images/logo-kemenpora.png" alt="Kemenpora" width={80} height={80} />
                 </div>
                 <h3 className="text-2xl font-bold text-text-dark">Kemenpora</h3>
               </div>
@@ -69,8 +69,8 @@ export default function AgendaPage() {
             {/* Card 4 - Placeholder untuk card keempat jika diperlukan */}
             <div className="bg-white rounded-xl p-8 border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300">
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-20 h-20 bg-primary/10 border-4 border-primary flex items-center justify-center rounded-full">
-                  <span className="text-primary text-xs font-bold">PG</span>
+                <div className="w-20 h-20 flex items-center justify-center">
+                  <Image src="/images/logo-dpr-official.png" alt="Program Pengembangan" width={80} height={80} />
                 </div>
                 <h3 className="text-2xl font-bold text-text-dark">Program Pengembangan</h3>
               </div>
