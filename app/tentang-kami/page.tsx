@@ -198,43 +198,20 @@ export default function TentangKamiPage() {
                 </div>
               </div>
             </div>
+            <div className="mt-8 flex justify-center">
+              <Image
+                src="/images/company-legality-qr.webp"
+                alt="Legalitas Perusahaan - QR"
+                width={220}
+                height={220}
+                className="rounded-md shadow"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Download Pedoman Section */}
-      <section className="py-20 bg-surface">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 p-8 md:p-12 text-center border border-gray-200">
-            <div className="mb-6">
-              <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-              </div>
-              <h3 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-                Pedoman Duta Pelajar Remaja Indonesia
-              </h3>
-              <p className="text-lg text-text-light mb-6">
-                Unduh buku pedoman resmi Duta Pelajar Remaja Indonesia Edisi 2025/2026 untuk memahami visi, misi, mekanisme, dan ketentuan program secara lengkap.
-              </p>
-            </div>
-            <a
-              href="/documents/Pedoman-DPRI-2026.pdf"
-              download="Pedoman-DPRI-2026.pdf"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-white text-lg font-semibold hover:opacity-90 transition rounded-lg shadow-soft"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
-              Unduh Pedoman DPRI 2026 (PDF)
-            </a>
-            <p className="text-sm text-text-light mt-4">
-              File size: ~1 MB | Format: PDF
-            </p>
-          </div>
-        </div>
-      </section>
+
 
     </main>
   );
