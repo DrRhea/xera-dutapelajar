@@ -154,7 +154,7 @@ export default function Home() {
               <p className="text-xs uppercase tracking-wider text-text-light">Legalitas Penyelenggara</p>
               <h3 className="text-2xl font-bold text-primary">CV. Pesona Prestasi Official</h3>
               <div className="space-y-2 text-text-light">
-                <p><span className="font-semibold text-text-dark">NIB:</span> 2003250056944</p>
+                <p><span className="font-semibold text-text-dark">Nomor Registrasi:</span> AHU-0028774-AH.01.14 Tahun 2025</p>
                 <p><span className="font-semibold text-text-dark">Alamat:</span> Jl. H. Rais. A. Rachman Gg. Bukit Sebedang No.21, Sungai Jawi, Pontianak Kota</p>
               </div>
               <Link
