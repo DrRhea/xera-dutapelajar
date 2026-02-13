@@ -188,8 +188,8 @@ export default function TentangKamiPage() {
                 <h3 className="text-2xl font-bold text-primary">CV. Pesona Prestasi Official</h3>
                 <div className="space-y-3 text-text-dark">
                   <div className="flex flex-col md:flex-row md:items-start gap-2">
-                    <span className="font-semibold text-primary min-w-[120px]">NIB:</span>
-                    <span className="text-lg">2003250056944</span>
+                    <span className="font-semibold text-primary min-w-[120px]">Nomor Registrasi:</span>
+                    <span className="text-lg">AHU-0028774-AH.01.14 Tahun 2025</span>
                   </div>
                   <div className="flex flex-col md:flex-row md:items-start gap-2">
                     <span className="font-semibold text-primary min-w-[120px]">Alamat Kantor:</span>
