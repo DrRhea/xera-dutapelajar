@@ -128,7 +128,7 @@ export default function HallOfFamePage() {
             <div className="inline-block w-16 h-0.5 bg-primary" />
             <p className="text-sm uppercase tracking-wider text-text-light">Pemenang 2025</p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-dark leading-tight">
-              GENERASI EMAS
+              Generasi Emas
             </h2>
           </div>
 
