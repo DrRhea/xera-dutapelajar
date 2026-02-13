@@ -126,10 +126,10 @@ export default function HallOfFamePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 space-y-3">
             <div className="inline-block w-16 h-0.5 bg-primary" />
-            <p className="text-sm uppercase tracking-wider text-text-light">GENERASI EMAS</p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-dark leading-tight">
               Pemenang 2025
             </h2>
+            <p className="text-sm uppercase tracking-wider text-text-light">GENERASI EMAS</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
