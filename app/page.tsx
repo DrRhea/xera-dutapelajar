@@ -128,7 +128,7 @@ export default function Home() {
       {/* Authority & Trust */}
       <section className="relative z-10 py-24 md:py-32 bg-surface">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 space-y-3">
+          <div className="text-center mb-16 space-y-3">
             <div className="inline-block w-16 h-0.5 bg-primary" />
             <p className="text-sm uppercase tracking-wider text-text-light">DISELENGGARAKAN OLEH</p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-dark leading-tight">
@@ -136,33 +136,82 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300 p-8 flex flex-col md:flex-row items-center gap-6">
-              <div className="relative w-32 h-32 rounded-xl overflow-hidden border border-gray-200">
-                <Image src="/images/people/founder-saputra.jpg" alt="Saputra" fill className="object-cover" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div className="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col">
+              <div className="relative w-full bg-gradient-to-br from-primary/5 to-primary/10 overflow-hidden" style={{ aspectRatio: '3/4' }}>
+                <Image 
+                  src="/images/people/founder-saputra.jpg" 
+                  alt="Saputra" 
+                  fill 
+                  className="object-cover hover:scale-105 transition-transform duration-300" 
+                />
               </div>
-              <div className="space-y-2 text-center md:text-left">
-                <h3 className="text-2xl font-bold text-text-dark">Saputra</h3>
-                <p className="text-sm font-semibold text-primary">Founder Duta Pelajar Remaja Indonesia</p>
-                <p className="text-text-light leading-relaxed">
-                  “Kami hadir untuk menyiapkan generasi pelajar yang berkarakter, berprestasi, dan siap menjadi agen perubahan.”
-                </p>
+              <div className="p-8 space-y-4 flex flex-col justify-between flex-1">
+                <div className="space-y-3">
+                  <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider">
+                    Founder
+                  </div>
+                  <h3 className="text-3xl font-bold text-text-dark">Saputra</h3>
+                  <p className="text-base font-semibold text-primary">Founder Duta Pelajar Remaja Indonesia</p>
+                </div>
+                <blockquote className="border-l-4 border-primary pl-4 py-2">
+                  <p className="text-text-light italic leading-relaxed">
+                    "Kami hadir untuk menyiapkan generasi pelajar yang berkarakter, berprestasi, dan siap menjadi agen perubahan."
+                  </p>
+                </blockquote>
               </div>
             </div>
 
-            <div className="bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300 p-8 space-y-3">
-              <p className="text-xs uppercase tracking-wider text-text-light">Legalitas Penyelenggara</p>
-              <h3 className="text-2xl font-bold text-primary">CV. Pesona Prestasi Official</h3>
-              <div className="space-y-2 text-text-light">
-                <p><span className="font-semibold text-text-dark">Nomor Registrasi:</span> AHU-0028774-AH.01.14 Tahun 2025</p>
-                <p><span className="font-semibold text-text-dark">Alamat:</span> Jl. H. Rais. A. Rachman Gg. Bukit Sebedang No.21, Sungai Jawi, Pontianak Kota</p>
+            <div className="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 p-8 space-y-6 flex flex-col">
+              <div className="space-y-1">
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="w-1 h-8 bg-primary rounded-full" />
+                  <p className="text-xs uppercase tracking-wider font-semibold text-text-light">Legalitas Penyelenggara</p>
+                </div>
               </div>
-              <Link
-                href="/tentang-kami"
-                className="inline-flex items-center justify-center px-8 py-3 bg-primary text-white text-base font-semibold rounded-xl hover:bg-red-900 transition shadow-sm"
-              >
-                Lihat Profil Resmi
-              </Link>
+
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-3xl font-bold text-primary mb-2">CV. Pesona Prestasi Official</h3>
+                  <div className="w-12 h-1 bg-primary rounded-full" />
+                </div>
+
+                <div className="space-y-4 bg-gray-50 rounded-xl p-6 border border-gray-100">
+                  <div className="space-y-2">
+                    <p className="text-xs uppercase tracking-wider font-semibold text-text-light">Nomor Registrasi</p>
+                    <p className="text-lg font-bold text-text-dark">AHU-0028774-AH.01.14 Tahun 2025</p>
+                  </div>
+                  <div className="h-px bg-gray-200" />
+                  <div className="space-y-2">
+                    <p className="text-xs uppercase tracking-wider font-semibold text-text-light">Alamat Kantor</p>
+                    <p className="text-sm text-text-dark leading-relaxed">Jl. H. Rais. A. Rachman Gg. Bukit Sebedang No.21, Sungai Jawi, Pontianak Kota</p>
+                  </div>
+                </div>
+
+                {/* QR Code for Legality Verification */}
+                <div className="flex flex-col items-center gap-4 p-6 bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl border-2 border-primary/20">
+                  <div className="space-y-2 text-center">
+                    <p className="text-xs uppercase tracking-wider font-semibold text-primary">Verifikasi Legalitas</p>
+                    <p className="text-sm text-text-light">Scan QR code untuk cek sertifikat resmi</p>
+                  </div>
+                  <div className="relative w-40 h-40 bg-white rounded-lg border-2 border-primary/30 p-2 flex items-center justify-center shadow-sm">
+                    <img
+                      src="/images/company-legality-qr.webp"
+                      alt="QR Code Legalitas"
+                      className="w-full h-full object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                  <p className="text-xs text-text-light">AHU-0028774-AH.01.14 Tahun 2025</p>
+                </div>
+
+                <Link
+                  href="/tentang-kami"
+                  className="inline-flex items-center justify-center px-8 py-3 bg-primary text-white text-base font-semibold rounded-xl hover:bg-red-900 transition shadow-sm w-full"
+                >
+                  Lihat Profil Resmi
+                </Link>
+              </div>
             </div>
           </div>
         </div>
