@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import VideoCard from "@/app/components/VideoCard";
 
 export default function HallOfFamePage() {
   const winners2025 = [
@@ -11,7 +12,8 @@ export default function HallOfFamePage() {
       img: "/images/people/winner-sma-kayla.jpg",
       achievement: "Juara 1 Tingkat Nasional",
       year: "2025",
-      video: "/video/DPRI_Kayla Adelia (2).mp4",
+      webm: "/video/DPRI_Kayla Adelia.webm",
+      mp4: "/video/DPRI_Kayla Adelia.mp4",
     },
     {
       name: "Andra Galang Pratama",
@@ -21,7 +23,8 @@ export default function HallOfFamePage() {
       img: "/images/people/winner-sma-andra.jpg",
       achievement: "Juara 1 Tingkat Nasional",
       year: "2025",
-      video: "/video/DPRI_Andra Galang Pratama.mp4",
+      webm: "/video/DPRI_Andra Galang Pratama.webm",
+      mp4: "/video/DPRI_Andra Galang Pratama.mp4",
     },
     {
       name: "I Gusti Agung Sakha Satwika",
@@ -31,7 +34,8 @@ export default function HallOfFamePage() {
       img: "/images/people/winner-smp-sakha.jpg",
       achievement: "Juara 1 Tingkat Nasional",
       year: "2025",
-      video: "/video/DPRI_I Gusti Agung.mp4",
+      webm: "/video/DPRI_I Gusti Agung.webm",
+      mp4: "/video/DPRI_I Gusti Agung.mp4",
     },
     {
       name: "Nandhira Arundati Vania",
@@ -41,61 +45,59 @@ export default function HallOfFamePage() {
       img: "/images/people/winner-smp-nandhira.jpg",
       achievement: "Juara 1 Tingkat Nasional",
       year: "2025",
-      video: "/video/DPRI_Nadira Arunda.mp4",
+      webm: "/video/DPRI_Nadira Arunda.webm",
+      mp4: "/video/DPRI_Nadira Arunda.mp4",
     },
-    // Temporarily hidden until .mov files are converted to .mp4
-    // {
-    //   name: "Andra Galang Pratama",
-    //   school: "SMKN 1 Gunung Putri",
-    //   category: "SMA",
-    //   title: "Winner SMA Nasional",
-    //   img: "/images/people/winner-sma-andra.jpg",
-    //   achievement: "Juara 1 Tingkat Nasional",
-    //   year: "2025",
-    //   video: "/video/DPRI_Andra Galang Pratama.mp4",
-    // },
   ];
 
   const highlightVideos = [
     {
       title: "Congratulations",
       description: "Ucapan selamat untuk seluruh pemenang dan finalis",
-      video: "/video/DPRI_Congratulations.mp4",
+      webm: "/video/DPRI_Congratulations.webm",
+      mp4: "/video/DPRI_Congratulations.mp4",
     },
     {
       title: "The Winners",
       description: "Momen kebanggaan para juara Duta Pelajar Remaja Indonesia",
-      video: "/video/DPRI_The Winners.mp4",
+      webm: "/video/DPRI_The Winners.webm",
+      mp4: "/video/DPRI_The Winners.mp4",
     },
     {
       title: "DPRI 2026",
       description: "Persiapan menuju gelaran Duta Pelajar Remaja Indonesia 2026",
-      video: "/video/DPRI_2026.mp4",
+      webm: "/video/DPRI_2026.webm",
+      mp4: "/video/DPRI_2026.mp4",
     },
     {
       title: "Kayla Adelia Panerusan",
       description: "Winner SMA Nasional dari SMAN 81 Jakarta",
-      video: "/video/DPRI_Kayla Adelia (2).mp4",
+      webm: "/video/DPRI_Kayla Adelia.webm",
+      mp4: "/video/DPRI_Kayla Adelia.mp4",
     },
     {
       title: "I Gusti Agung Sakha Satwika",
       description: "Winner SMP Nasional dari SMPN 15 Jakarta",
-      video: "/video/DPRI_I Gusti Agung.mp4",
+      webm: "/video/DPRI_I Gusti Agung.webm",
+      mp4: "/video/DPRI_I Gusti Agung.mp4",
     },
     {
       title: "Nandhira Arundati Vania",
       description: "Winner SMP Nasional dari SMPN 154 Jakarta",
-      video: "/video/DPRI_Nadira Arunda.mp4",
+      webm: "/video/DPRI_Nadira Arunda.webm",
+      mp4: "/video/DPRI_Nadira Arunda.mp4",
     },
     {
       title: "Kategori SMP",
       description: "Highlight dan dokumentasi finalis kategori SMP",
-      video: "/video/DPRI_SMP.mp4",
+      webm: "/video/DPRI_SMP.webm",
+      mp4: "/video/DPRI_SMP.mp4",
     },
     {
       title: "Andra Galang Pratama",
       description: "Winner SMA Nasional dari SMKN 1 Gunung Putri",
-      video: "/video/DPRI_Andra Galang Pratama.mp4",
+      webm: "/video/DPRI_Andra Galang Pratama.webm",
+      mp4: "/video/DPRI_Andra Galang Pratama.mp4",
     },
   ];
 
@@ -184,31 +186,13 @@ export default function HallOfFamePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {highlightVideos.map((item) => (
-              <div
+              <VideoCard
                 key={item.title}
-                className="bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden group"
-              >
-                <div className="relative flex items-center justify-center bg-white">
-                  <video
-                    controls
-                    playsInline
-                    className="w-full h-auto"
-                    style={{ maxHeight: '80vh', objectFit: 'contain' }}
-                    preload="auto"
-                  >
-                    <source src={item.video} type="video/mp4" />
-                    <p className="text-gray-600 text-center p-4">
-                      Video tidak dapat diputar. Browser Anda mungkin tidak mendukung codec video ini.
-                      <br />
-                      <span className="text-sm text-gray-400">Coba buka dengan browser Safari atau convert video ke H.264 codec.</span>
-                    </p>
-                  </video>
-                </div>
-                <div className="p-6 space-y-2">
-                  <h3 className="text-xl font-bold text-text-dark">{item.title}</h3>
-                  <p className="text-sm text-text-light leading-relaxed">{item.description}</p>
-                </div>
-              </div>
+                title={item.title}
+                description={item.description}
+                webmSrc={item.webm}
+                mp4Src={item.mp4}
+              />
             ))}
           </div>
         </div>
