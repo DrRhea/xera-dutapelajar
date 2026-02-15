@@ -1,20 +1,15 @@
+'use client';
+
 import Image from "next/image";
 import Link from "next/link";
-import VideoCard from "@/app/components/VideoCard";
+import { useState } from "react";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 
 export default function HallOfFamePage() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+
   const winners2025 = [
-    {
-      name: "Kayla Adelia Panerusan",
-      school: "SMAN 81 Jakarta",
-      category: "SMA",
-      title: "Winner SMA Nasional",
-      img: "/images/people/winner-sma-kayla.jpg",
-      achievement: "Juara 1 Tingkat Nasional",
-      year: "2025",
-      webm: "/video/DPRI_Kayla Adelia.webm",
-      mp4: "/video/DPRI_Kayla Adelia.mp4",
-    },
     {
       name: "Andra Galang Pratama",
       school: "SMKN 1 Gunung Putri",
@@ -25,6 +20,17 @@ export default function HallOfFamePage() {
       year: "2025",
       webm: "/video/DPRI_Andra Galang Pratama.webm",
       mp4: "/video/DPRI_Andra Galang Pratama.mp4",
+    },
+    {
+      name: "Kayla Adelia Panerusan",
+      school: "SMAN 81 Jakarta",
+      category: "SMA",
+      title: "Winner SMA Nasional",
+      img: "/images/people/winner-sma-kayla.jpg",
+      achievement: "Juara 1 Tingkat Nasional",
+      year: "2025",
+      webm: "/video/DPRI_Kayla Adelia.webm",
+      mp4: "/video/DPRI_Kayla Adelia.mp4",
     },
     {
       name: "I Gusti Agung Sakha Satwika",
@@ -49,6 +55,24 @@ export default function HallOfFamePage() {
       mp4: "/video/DPRI_Nadira Arunda.mp4",
     },
   ];
+
+  const currentWinner = winners2025[currentIndex];
+
+  const handlePrev = () => {
+    setCurrentIndex((prev) => (prev === 0 ? winners2025.length - 1 : prev - 1));
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev === winners2025.length - 1 ? 0 : prev + 1));
+  };
+
+  const handlePrevVideo = () => {
+    setCurrentVideoIndex((prev) => (prev === 0 ? highlightVideos.length - 1 : prev - 1));
+  };
+
+  const handleNextVideo = () => {
+    setCurrentVideoIndex((prev) => (prev === highlightVideos.length - 1 ? 0 : prev + 1));
+  };
 
   const highlightVideos = [
     {
@@ -103,95 +127,228 @@ export default function HallOfFamePage() {
 
   return (
     <main className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="relative bg-primary py-24 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-red-900" />
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-block w-16 h-0.5 bg-white/30 mb-4" />
-          <p className="text-white/70 text-sm uppercase tracking-[0.2em] mb-4">
-            Prestasi Gemilang
-          </p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight">
-            Hall of Fame
-          </h1>
-          <p className="text-white/90 text-base md:text-lg mt-6 max-w-2xl mx-auto leading-relaxed">
-            Menghormati Pelajar Berprestasi yang Telah Mengharumkan Nama Bangsa
-          </p>
-        </div>
-      </section>
-
       {/* Winners 2025 */}
-      <section className="relative py-24 md:py-32 bg-surface">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 space-y-3">
-            <div className="inline-block w-16 h-0.5 bg-primary" />
-            <p className="text-sm uppercase tracking-wider text-text-light">Pemenang 2025</p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-dark leading-tight">
-              Generasi Emas
-            </h2>
+      <section className="relative min-h-screen bg-surface grid grid-cols-1 md:grid-cols-2">
+        {/* Image - Left */}
+        <div className="relative w-full h-screen md:h-full bg-surface overflow-hidden">
+          <Image 
+            src={currentWinner.img} 
+            alt={currentWinner.name} 
+            fill 
+            className="object-cover transition-opacity duration-500" 
+            priority 
+          />
+          
+          {/* Overlay Gradient - Red bottom, transparent top */}
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-primary/80" />
+          
+          {/* Navigation - Arrows */}
+          <div className="absolute inset-0 flex items-center justify-between px-4 md:px-8 z-20">
+            <button
+              onClick={handlePrev}
+              className="bg-white/20 hover:bg-white/40 backdrop-blur-sm text-white rounded-full p-3 transition-all"
+              aria-label="Previous winner"
+            >
+              <ChevronLeftIcon className="w-6 h-6" />
+            </button>
+            <button
+              onClick={handleNext}
+              className="bg-white/20 hover:bg-white/40 backdrop-blur-sm text-white rounded-full p-3 transition-all"
+              aria-label="Next winner"
+            >
+              <ChevronRightIcon className="w-6 h-6" />
+            </button>
           </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            {winners2025.map((winner) => (
-              <div
-                key={winner.name}
-                className="bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden group"
-              >
-                <div className="relative aspect-[3/4] bg-gray-100 overflow-hidden">
-                  <Image 
-                    src={winner.img} 
-                    alt={winner.name} 
-                    fill 
-                    className="object-cover group-hover:scale-105 transition-transform duration-300" 
-                  />
-                  <div className="absolute top-3 left-3">
-                    <span className="px-3 py-1 rounded-full text-xs font-semibold bg-primary text-white shadow-md">
-                      {winner.category}
-                    </span>
-                  </div>
-                  <div className="absolute top-3 right-3">
-                    <span className="px-3 py-1 rounded-full text-xs font-semibold bg-white text-primary shadow-md">
-                      {winner.year}
-                    </span>
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </div>
-                <div className="p-5 space-y-2">
-                  <p className="text-xs text-primary font-semibold uppercase tracking-wider">{winner.title}</p>
-                  <h3 className="text-lg font-bold text-text-dark leading-tight">{winner.name}</h3>
-                  <p className="text-sm text-text-light">{winner.school}</p>
-                  <div className="pt-2 border-t border-gray-100 mt-3">
-                    <p className="text-xs text-text-light">{winner.achievement}</p>
-                  </div>
-                </div>
+          
+          {/* Mobile Overlay */}
+          <div className="absolute md:hidden bottom-0 left-0 right-0 p-6 z-10">
+            <div className="space-y-3">
+              <div className="inline-flex">
+                <span className="px-3 py-1 rounded-full text-xs font-semibold bg-white text-primary">
+                  {currentWinner.title.toUpperCase()}
+                </span>
               </div>
+              <h2 className="text-2xl md:text-3xl font-bold text-white leading-tight">
+                {currentWinner.name.split(' ').slice(0, 2).join(' ')}<br/>
+                {currentWinner.name.split(' ').slice(2).join(' ')}
+              </h2>
+              <p className="text-base text-white/90">{currentWinner.school}</p>
+            </div>
+          </div>
+          
+          {/* Mobile Navigation Dots */}
+          <div className="absolute md:hidden bottom-24 left-0 right-0 flex justify-center gap-2 z-10">
+            {winners2025.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCurrentIndex(idx)}
+                className={`w-2 h-2 rounded-full transition-all ${
+                  idx === currentIndex ? 'bg-white w-6' : 'bg-white/50'
+                }`}
+                aria-label={`Go to winner ${idx + 1}`}
+              />
             ))}
+          </div>
+        </div>
+
+        {/* Content - Right */}
+        <div className="hidden md:flex flex-col items-start justify-end px-8 md:px-12 lg:px-16 py-12 md:py-16 relative z-10">
+          <div className="max-w-md space-y-8 w-full">
+            {/* Header */}
+            <div className="space-y-2">
+              <div className="inline-block w-12 h-0.5 bg-primary" />
+            </div>
+
+            {/* Badge */}
+            <div className="inline-flex">
+              <span className="px-4 py-2 rounded-full text-xs font-semibold bg-primary text-white">
+                {currentWinner.title.toUpperCase()}
+              </span>
+            </div>
+
+            {/* Name */}
+            <div className="space-y-2">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-text-dark leading-tight">
+                {currentWinner.name.split(' ').slice(0, 2).join(' ')}<br/>
+                {currentWinner.name.split(' ').slice(2).join(' ')}
+              </h2>
+            </div>
+
+            {/* School */}
+            <div>
+              <p className="text-lg md:text-xl text-text-light">{currentWinner.school}</p>
+            </div>
+
+            {/* Navigation Dots */}
+            <div className="flex gap-2 pt-4">
+              {winners2025.map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setCurrentIndex(idx)}
+                  className={`h-1 rounded-full transition-all ${
+                    idx === currentIndex ? 'bg-primary w-8' : 'bg-gray-300 w-2'
+                  }`}
+                  aria-label={`Go to winner ${idx + 1}`}
+                />
+              ))}
+            </div>
+
+            {/* CTA */}
+            <Link
+              href="#video-highlights"
+              className="inline-flex items-center justify-center px-8 py-3 bg-primary text-white font-semibold rounded-xl hover:bg-red-900 transition mt-4"
+            >
+              Lihat Video Highlights
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Video Highlights */}
-      <section className="relative py-24 md:py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 space-y-3">
-            <div className="inline-block w-16 h-0.5 bg-primary" />
-            <p className="text-sm uppercase tracking-wider text-text-light">VIDEO UNGGULAN</p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-dark leading-tight">
-              Momen Bersejarah
-            </h2>
-          </div>
+      <section id="video-highlights" className="relative bg-surface grid grid-cols-1 md:grid-cols-2">
+        {/* Content - Left */}
+        <div className="hidden md:flex flex-col items-end justify-end px-8 md:px-12 lg:px-16 py-12 md:py-16 relative z-10 bg-surface">
+          <div className="max-w-md space-y-8 w-full">
+            {/* Header */}
+            <div className="space-y-2 flex justify-end">
+              <div className="inline-block w-12 h-0.5 bg-primary" />
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {highlightVideos.map((item) => (
-              <VideoCard
-                key={item.title}
-                title={item.title}
-                description={item.description}
-                webmSrc={item.webm}
-                mp4Src={item.mp4}
+            {/* Badge */}
+            <div className="flex justify-end">
+              <span className="px-4 py-2 rounded-full text-xs font-semibold bg-primary text-white">
+                VIDEO UNGGULAN
+              </span>
+            </div>
+
+            {/* Title */}
+            <div className="space-y-2 text-right">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-text-dark leading-tight">
+                {highlightVideos[currentVideoIndex].title}
+              </h2>
+            </div>
+
+            {/* Description */}
+            <div className="text-right">
+              <p className="text-lg md:text-xl text-text-light">{highlightVideos[currentVideoIndex].description}</p>
+            </div>
+
+            {/* Navigation Dots */}
+            <div className="flex gap-2 pt-4 justify-end">
+              {highlightVideos.map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setCurrentVideoIndex(idx)}
+                  className={`h-1 rounded-full transition-all ${
+                    idx === currentVideoIndex ? 'bg-primary w-8' : 'bg-gray-300 w-2'
+                  }`}
+                  aria-label={`Go to video ${idx + 1}`}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Video - Right */}
+        <div className="relative w-full h-screen bg-surface overflow-hidden">
+          {/* Video Player */}
+          <div className="w-full h-full flex items-center justify-center bg-surface">
+            <video
+              key={currentVideoIndex}
+              controls
+              playsInline
+              className="w-full h-full object-contain"
+              preload="metadata"
+            >
+              <source src={highlightVideos[currentVideoIndex].webm} type="video/webm" />
+              <source src={highlightVideos[currentVideoIndex].mp4} type="video/mp4" />
+              <p className="text-gray-400">Video tidak dapat diputar</p>
+            </video>
+          </div>
+          
+          {/* Navigation - Arrows */}
+          <div className="absolute inset-0 flex items-center justify-between px-4 md:px-8 z-20 pointer-events-none">
+            <button
+              onClick={handlePrevVideo}
+              className="pointer-events-auto bg-white/20 hover:bg-white/40 backdrop-blur-sm text-white rounded-full p-3 transition-all"
+              aria-label="Previous video"
+            >
+              <ChevronLeftIcon className="w-6 h-6" />
+            </button>
+            <button
+              onClick={handleNextVideo}
+              className="pointer-events-auto bg-white/20 hover:bg-white/40 backdrop-blur-sm text-white rounded-full p-3 transition-all"
+              aria-label="Next video"
+            >
+              <ChevronRightIcon className="w-6 h-6" />
+            </button>
+          </div>
+          
+          {/* Mobile Overlay */}
+          <div className="absolute md:hidden bottom-0 left-0 right-0 p-6 z-10 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+            <div className="space-y-3">
+              <div className="inline-flex">
+                <span className="px-3 py-1 rounded-full text-xs font-semibold bg-white text-primary">
+                  VIDEO UNGGULAN
+                </span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold text-white leading-tight">
+                {highlightVideos[currentVideoIndex].title}
+              </h2>
+              <p className="text-base text-white/90">{highlightVideos[currentVideoIndex].description}</p>
+            </div>
+          </div>
+          
+          {/* Mobile Navigation Dots */}
+          <div className="absolute md:hidden bottom-40 left-0 right-0 flex justify-center gap-2 z-10">
+            {highlightVideos.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCurrentVideoIndex(idx)}
+                className={`w-2 h-2 rounded-full transition-all ${
+                  idx === currentVideoIndex ? 'bg-white w-6' : 'bg-white/50'
+                }`}
+                aria-label={`Go to video ${idx + 1}`}
               />
             ))}
           </div>
