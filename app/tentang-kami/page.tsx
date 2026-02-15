@@ -5,7 +5,7 @@ export default function TentangKamiPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="py-20 bg-primary">
+      <section className="pt-24 pb-20 bg-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-6">
             <div className="flex items-center justify-center gap-4 mb-4">
