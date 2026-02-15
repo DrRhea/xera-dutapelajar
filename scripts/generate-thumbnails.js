@@ -44,9 +44,10 @@ webmFiles.forEach(file => {
     }
 
     // Generate thumbnail using ffmpeg
-    // Extract frame at 0 second, scale to 320x180, save as JPEG
+    // Extract frame at 0 second, scale to portrait 9:16 (360x640)
     // Using JPEG as fallback (always available in ffmpeg)
-    const command = `ffmpeg -ss 0 -i "${videoPath}" -vframes 1 -vf "scale=320:180:force_original_aspect_ratio=decrease,pad=320:180:(ow-iw)/2:(oh-ih)/2" -q:v 5 "${thumbnailPath}" -y`;
+    // Portrait aspect ratio to match video dimensions
+    const command = `ffmpeg -ss 0 -i "${videoPath}" -vframes 1 -vf "scale=360:640:force_original_aspect_ratio=decrease,pad=360:640:(ow-iw)/2:(oh-ih)/2" -q:v 5 "${thumbnailPath}" -y`;
     
     execSync(command, { stdio: 'pipe' });
     

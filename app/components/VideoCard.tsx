@@ -69,7 +69,8 @@ export default function VideoCard({
       ref={containerRef}
       className="bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden group"
     >
-      <div className="relative flex items-center justify-center bg-gray-900 aspect-video">
+      {/* Video Container - Portrait 9:16 aspect ratio */}
+      <div className="relative flex items-center justify-center bg-gray-900" style={{ aspectRatio: '9/16' }}>
         {hasIntersected ? (
           <video
             ref={videoRef}
