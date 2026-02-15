@@ -27,7 +27,7 @@ export default function VideoCard({
   const getAutoThumbnailPath = () => {
     if (thumbnail) return thumbnail;
     const fileName = webmSrc.split('/').pop()?.replace('.webm', '');
-    return fileName ? `/thumbnails/${fileName}.webp` : null;
+    return fileName ? `/thumbnails/${fileName}.jpg` : null;
   };
   
   const [thumbnailSrc, setThumbnailSrc] = useState<string | null>(getAutoThumbnailPath());

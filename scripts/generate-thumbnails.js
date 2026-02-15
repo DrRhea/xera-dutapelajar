@@ -2,6 +2,8 @@
 
 /**
  * Generate video thumbnails from WebM files
+ * Output format: JPEG (universal format, compatible with all systems)
+ * Alternative: WebP or PNG can be used manually
  * Usage: node scripts/generate-thumbnails.js
  */
 
@@ -32,25 +34,26 @@ console.log(`\n📹 Found ${webmFiles.length} WebM files\n`);
 webmFiles.forEach(file => {
   const videoPath = path.join(VIDEO_DIR, file);
   const baseName = path.basename(file, '.webm');
-  const thumbnailPath = path.join(THUMBNAIL_DIR, `${baseName}.webp`);
+  const thumbnailPath = path.join(THUMBNAIL_DIR, `${baseName}.jpg`);
 
   try {
     // Check if thumbnail already exists
     if (fs.existsSync(thumbnailPath)) {
-      console.log(`⏭️  ${baseName}.webp already exists, skipping...`);
+      console.log(`⏭️  ${baseName}.jpg already exists, skipping...`);
       return;
     }
 
     // Generate thumbnail using ffmpeg
-    // Extract frame at 0.5 second, scale to 320x180, save as webp
-    const command = `ffmpeg -ss 0 -i "${videoPath}" -vframes 1 -vf "scale=320:180:force_original_aspect_ratio=decrease,pad=320:180:(ow-iw)/2:(oh-ih)/2" -c:v libwebp -q:v 80 "${thumbnailPath}" -y`;
+    // Extract frame at 0 second, scale to 320x180, save as JPEG
+    // Using JPEG as fallback (always available in ffmpeg)
+    const command = `ffmpeg -ss 0 -i "${videoPath}" -vframes 1 -vf "scale=320:180:force_original_aspect_ratio=decrease,pad=320:180:(ow-iw)/2:(oh-ih)/2" -q:v 5 "${thumbnailPath}" -y`;
     
     execSync(command, { stdio: 'pipe' });
     
     const stats = fs.statSync(thumbnailPath);
     const sizeKB = (stats.size / 1024).toFixed(2);
     
-    console.log(`✓ ${baseName}.webp (${sizeKB} KB)`);
+    console.log(`✓ ${baseName}.jpg (${sizeKB} KB)`);
   } catch (error) {
     console.error(`✗ Failed to generate thumbnail for ${file}:`);
     console.error(error.message);

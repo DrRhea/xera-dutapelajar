@@ -40,16 +40,16 @@ npm run generate-thumbnails
 Ini akan:
 - ✅ Automatically extract frame pertama dari setiap WebM
 - ✅ Resize to 320x180 (optimal size)
-- ✅ Convert ke WebP (format terkompresi)
+- ✅ Convert ke JPEG (format universal, highly compatible)
 - ✅ Save ke `/public/thumbnails/`
 
 **Contoh hasil:**
 ```
 public/
 └── thumbnails/
-    ├── DPRI_Congratulations.webp
-    ├── DPRI_The Winners.webp
-    ├── DPRI_Kayla Adelia.webm
+    ├── DPRI_Congratulations.jpg
+    ├── DPRI_The Winners.jpg
+    ├── DPRI_Kayla Adelia.jpg
     └── ... (lebih banyak)
 ```
 
@@ -60,8 +60,8 @@ Jika belum mau install ffmpeg:
 1. **Buat folder:** `public/thumbnails/`
 2. **Nama file harus match video name:**
    - Video: `DPRI_Congratulations.webm`
-   - Thumbnail: `DPRI_Congratulations.webp` atau `.jpg`
-3. **Upload file .webp/.jpg ke folder**
+   - Thumbnail: `DPRI_Congratulations.jpg` atau `.png` atau `.webp`
+3. **Upload file gambar ke folder**
 
 VideoCard akan **otomatis** detect dan menggunakan thumbnail!
 
@@ -78,14 +78,14 @@ VideoCard akan **otomatis** detect dan menggunakan thumbnail!
 ```
 DPRI_Congratulations:
 ├── MP4:     2.8 MB
-├── WebM:    7.0 MB ⚠️ (Ini normal, codec berbeda)
-├── Thumbnail (WebP): 12 KB
+├── WebM:    7.0 MB
+├── Thumbnail (JPEG): 15-25 KB
 └── Total:  ~7.0 MB (vs 2.8 MB MP4)
 
-Keuntungan WebM:
-✓ Browser support lebih baik di mobile modern
-✓ Lazy loading + thumbnail = UX lebih baik
-✓ User kontrol = bandwidth hemat
+Format Comparison:
+├── JPEG: 15-25 KB (universal, recommended for thumbnails)
+├── WebP: 10-15 KB (smaller but needs support)
+└── PNG:  20-30 KB (lossless but bigger)
 ```
 
 ## ⚙️ Setup Video Card Data
@@ -133,18 +133,18 @@ npm run build
 ## 📝 Notes
 
 - Thumbnail path harus match video filename (without extension)
-- Format thumbnail: `.webp` (recommended) atau `.jpg`
+- Format thumbnail: `.jpg` (recommended, auto-generated), `.png`, atau `.webp`
 - Size: minimum 320x180px recommended
-- Compression: kecil adalah yang baik (target < 20KB per thumbnail)
+- Compression: kecil adalah yang baik (target < 30KB per thumbnail)
 
 ## 🎬 Video Codec Info
 
 ```
-Video Format   | Size  | Browser Support | Quality
--------------- | ----- | --------------- | -------
-MP4 (H.264)    | 2-5MB | ✓ Semua        | High
-WebM (VP8/VP9) | 7-15MB| ✓ Modern       | High
-Thumbnail (WebP) | 10-20KB | ✓ Semua  | Medium
+Format          | Size   | Browser Support | Quality  | Auto-Generate
+--------------- | ------ | --------------- | -------- | --------
+MP4 (H.264)     | 2-5 MB | ✓ Semua         | High     | ✗
+WebM (VP9)      | 7-15MB | ✓ Modern        | High     | ✓
+Thumbnail (JPEG)| 15-25KB| ✓ Semua         | Medium   | ✓
 ```
 
 ## ❓ FAQ
