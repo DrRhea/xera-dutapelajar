@@ -8,7 +8,7 @@ interface VideoCardProps {
   description: string;
   webmSrc: string;
   mp4Src: string;
-  thumbnail?: string;
+  thumbnail?: string; // Optional: explicit thumbnail path
 }
 
 export default function VideoCard({
@@ -22,7 +22,15 @@ export default function VideoCard({
   const containerRef = useRef<HTMLDivElement>(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasIntersected, setHasIntersected] = useState(false);
-  const [thumbnailSrc, setThumbnailSrc] = useState<string | null>(thumbnail || null);
+  
+  // Generate automatic thumbnail path from WebM filename
+  const getAutoThumbnailPath = () => {
+    if (thumbnail) return thumbnail;
+    const fileName = webmSrc.split('/').pop()?.replace('.webm', '');
+    return fileName ? `/thumbnails/${fileName}.webp` : null;
+  };
+  
+  const [thumbnailSrc, setThumbnailSrc] = useState<string | null>(getAutoThumbnailPath());
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -52,31 +60,8 @@ export default function VideoCard({
     };
   }, [hasIntersected]);
 
-  // Generate thumbnail from video first frame
-  const generateThumbnail = () => {
-    if (videoRef.current && !thumbnailSrc) {
-      const video = videoRef.current;
-      video.currentTime = 0;
-      
-      video.addEventListener('loadedmetadata', () => {
-        const canvas = document.createElement('canvas');
-        canvas.width = video.videoWidth;
-        canvas.height = video.videoHeight;
-        const ctx = canvas.getContext('2d');
-        
-        if (ctx) {
-          ctx.drawImage(video, 0, 0);
-          const thumb = canvas.toDataURL('image/jpeg', 0.8);
-          setThumbnailSrc(thumb);
-        }
-      }, { once: true });
-    }
-  };
-
   const handleLoadedMetadata = () => {
-    if (!thumbnailSrc) {
-      generateThumbnail();
-    }
+    setIsLoaded(true);
   };
 
   return (
@@ -84,14 +69,13 @@ export default function VideoCard({
       ref={containerRef}
       className="bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden group"
     >
-      <div className="relative flex items-center justify-center bg-gray-900">
+      <div className="relative flex items-center justify-center bg-gray-900 aspect-video">
         {hasIntersected ? (
           <video
             ref={videoRef}
             controls
             playsInline
-            className="w-full h-auto"
-            style={{ maxHeight: '80vh', objectFit: 'contain' }}
+            className="w-full h-full object-contain"
             preload="none"
             poster={thumbnailSrc || undefined}
             onLoadedMetadata={handleLoadedMetadata}
@@ -99,8 +83,8 @@ export default function VideoCard({
           >
             <source src={webmSrc} type="video/webm" />
             <source src={mp4Src} type="video/mp4" />
-            <p className="text-gray-600 text-center p-4 absolute inset-0 flex items-center justify-center">
-              Video tidak dapat diputar. Browser Anda mungkin tidak mendukung codec video ini.
+            <p className="text-gray-400 text-center p-4">
+              Video tidak dapat diputar
             </p>
           </video>
         ) : (
@@ -108,13 +92,17 @@ export default function VideoCard({
             {thumbnailSrc && (
               <img
                 src={thumbnailSrc}
-                alt={title}
-                className="w-full h-auto object-cover"
-                style={{ maxHeight: '80vh' }}
+                alt={`${title} thumbnail`}
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  // Fallback gradient if thumbnail fails to load
+                  const el = e.target as HTMLImageElement;
+                  el.style.display = 'none';
+                }}
               />
             )}
-            <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-              <div className="bg-white/20 backdrop-blur-sm p-4 rounded-full">
+            <div className="absolute inset-0 bg-gradient-to-br from-gray-800 via-gray-900 to-black flex items-center justify-center">
+              <div className="bg-primary/80 backdrop-blur-sm p-4 rounded-full hover:bg-primary transition-colors">
                 <svg
                   className="w-12 h-12 text-white"
                   fill="currentColor"
