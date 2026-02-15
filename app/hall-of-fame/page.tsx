@@ -128,9 +128,9 @@ export default function HallOfFamePage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Winners 2025 */}
-      <section className="relative min-h-screen bg-surface grid grid-cols-1 md:grid-cols-2">
+      <section className="relative min-h-screen bg-white grid grid-cols-1 md:grid-cols-2">
         {/* Image - Left */}
-        <div className="relative w-full h-screen md:h-full bg-surface overflow-hidden">
+        <div className="relative w-full h-screen md:h-full bg-white overflow-hidden">
           <Image 
             src={currentWinner.img} 
             alt={currentWinner.name} 
@@ -245,9 +245,9 @@ export default function HallOfFamePage() {
       </section>
 
       {/* Video Highlights */}
-      <section id="video-highlights" className="relative bg-surface grid grid-cols-1 md:grid-cols-2">
+      <section id="video-highlights" className="relative bg-white grid grid-cols-1 md:grid-cols-2">
         {/* Content - Left */}
-        <div className="hidden md:flex flex-col items-end justify-end px-8 md:px-12 lg:px-16 py-12 md:py-16 relative z-10 bg-surface">
+        <div className="hidden md:flex flex-col items-end justify-end px-8 md:px-12 lg:px-16 py-12 md:py-16 relative z-10 bg-white">
           <div className="max-w-md space-y-8 w-full">
             {/* Header */}
             <div className="space-y-2 flex justify-end">
@@ -290,9 +290,9 @@ export default function HallOfFamePage() {
         </div>
 
         {/* Video - Right */}
-        <div className="relative w-full h-screen bg-surface overflow-hidden">
+        <div className="relative w-full h-screen bg-white overflow-hidden">
           {/* Video Player */}
-          <div className="w-full h-full flex items-center justify-center bg-surface">
+          <div className="w-full h-full flex items-center justify-center bg-white">
             <video
               key={currentVideoIndex}
               controls
@@ -310,14 +310,14 @@ export default function HallOfFamePage() {
           <div className="absolute inset-0 flex items-center justify-between px-4 md:px-8 z-20 pointer-events-none">
             <button
               onClick={handlePrevVideo}
-              className="pointer-events-auto bg-white/20 hover:bg-white/40 backdrop-blur-sm text-white rounded-full p-3 transition-all"
+              className="pointer-events-auto bg-primary/80 hover:bg-primary text-white rounded-full p-3 transition-all shadow-md"
               aria-label="Previous video"
             >
               <ChevronLeftIcon className="w-6 h-6" />
             </button>
             <button
               onClick={handleNextVideo}
-              className="pointer-events-auto bg-white/20 hover:bg-white/40 backdrop-blur-sm text-white rounded-full p-3 transition-all"
+              className="pointer-events-auto bg-primary/80 hover:bg-primary text-white rounded-full p-3 transition-all shadow-md"
               aria-label="Next video"
             >
               <ChevronRightIcon className="w-6 h-6" />

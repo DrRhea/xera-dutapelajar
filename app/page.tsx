@@ -87,14 +87,14 @@ export default function Home() {
               <div className="flex flex-wrap gap-4 mt-10">
                 <Link
                   href="#daftar"
-                  className="inline-flex items-center justify-center px-8 py-3 bg-white text-primary text-base font-semibold rounded-xl hover:bg-gray-100 transition shadow-sm"
+                  className="inline-flex items-center justify-center h-12 px-8 bg-white text-primary text-base font-semibold rounded-xl hover:bg-gray-100 transition shadow-sm"
                 >
                   Daftar Sekarang
                 </Link>
                 <a
                   href="/documents/Pedoman-DPRI-2026.pdf"
                   download="Pedoman-DPRI-2026.pdf"
-                  className="inline-flex items-center justify-center px-8 py-3 bg-transparent text-white text-base font-semibold rounded-xl border border-white/30 hover:bg-white/10 transition gap-2"
+                  className="inline-flex items-center justify-center h-12 px-8 bg-transparent text-white text-base font-semibold rounded-xl border border-white/30 hover:bg-white/10 transition gap-2"
                 >
                   <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -225,7 +225,7 @@ export default function Home() {
       </section>
 
       {/* Diselenggarakan Oleh */}
-      <section className="relative z-10 bg-surface">
+      <section className="relative z-10 bg-white">
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen">
           <div className="bg-white flex flex-col justify-end items-end px-8 md:px-12 lg:px-16 py-12 md:py-16 order-2 lg:order-1">
             <div className="space-y-8 max-w-xl text-right">
@@ -297,6 +297,42 @@ export default function Home() {
         </div>
       </section>
 
+      {/* The Journey */}
+      <section className="relative z-10 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-24">
+          <div className="space-y-3 text-center">
+            <p className="text-xs uppercase tracking-[0.2em] text-text-light">ALUR SELEKSI NASIONAL</p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-dark leading-tight">
+              Alur Seleksi Nasional
+            </h2>
+            <div className="w-16 h-0.5 bg-primary mx-auto" />
+          </div>
+
+          <div className="relative mt-14">
+            <div className="hidden lg:block absolute left-0 right-0 top-4 h-px bg-primary/20" />
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-10">
+              {[
+                { step: "01", title: "Pendaftaran", desc: "Registrasi online dan unggah berkas." },
+                { step: "02", title: "Audisi", desc: "Seleksi berkas, wawancara, dan penilaian." },
+                { step: "03", title: "Karantina", desc: "Pembinaan intensif dan pembekalan." },
+                { step: "04", title: "Grand Final", desc: "Malam puncak dan penobatan." },
+              ].map((stage) => (
+                <div key={stage.step} className="space-y-4">
+                  <div className="flex items-center gap-4 lg:justify-center">
+                    <div className="w-3 h-3 rounded-full bg-primary ring-4 ring-primary/15" />
+                    <div className="text-2xl font-bold text-primary">{stage.step}</div>
+                  </div>
+                  <div className="space-y-2 text-left lg:text-center">
+                    <h3 className="text-xl font-bold text-text-dark">{stage.title}</h3>
+                    <p className="text-text-light leading-relaxed">{stage.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Premium Benefits */}
       <section className="relative z-10 py-24 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -323,34 +359,6 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold text-text-dark mb-2">{benefit.title}</h3>
                 <p className="text-text-light">{benefit.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* The Journey */}
-      <section className="relative z-10 py-24 md:py-32 bg-surface">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 space-y-3">
-            <div className="inline-block w-16 h-0.5 bg-primary" />
-            <p className="text-sm uppercase tracking-wider text-text-light">ALUR SELEKSI NASIONAL</p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-dark leading-tight">
-              Alur Seleksi Nasional
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { step: "01", title: "Pendaftaran", desc: "Registrasi online dan unggah berkas." },
-              { step: "02", title: "Audisi", desc: "Seleksi berkas, wawancara, dan penilaian." },
-              { step: "03", title: "Karantina", desc: "Pembinaan intensif dan pembekalan." },
-              { step: "04", title: "Grand Final", desc: "Malam puncak dan penobatan." },
-            ].map((stage) => (
-              <div key={stage.step} className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300">
-                <div className="text-2xl font-bold text-primary mb-3">{stage.step}</div>
-                <h3 className="text-lg font-bold text-text-dark mb-2">{stage.title}</h3>
-                <p className="text-text-light">{stage.desc}</p>
               </div>
             ))}
           </div>
