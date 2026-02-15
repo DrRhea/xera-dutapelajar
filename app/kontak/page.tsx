@@ -3,8 +3,8 @@ import Link from "next/link";
 export default function KontakPage() {
   return (
     <main className="min-h-screen bg-white">
-      <section className="min-h-screen bg-white grid grid-cols-1 md:grid-cols-2">
-        <div className="flex flex-col justify-end px-6 md:px-10 lg:px-14 py-12 md:py-16 border-b md:border-b-0 md:border-r border-primary/10">
+      <section className="min-h-screen bg-white grid grid-cols-1 md:grid-cols-2 pt-20 md:pt-0">
+        <div className="flex flex-col justify-end px-6 md:px-10 lg:px-14 py-12 md:py-16 [@media(max-height:740px)]:py-8 border-b md:border-b-0 md:border-r border-primary/10">
           <div className="space-y-6">
             <div className="space-y-3">
               <p className="text-xs uppercase tracking-[0.2em] text-text-light">HUBUNGI KAMI</p>

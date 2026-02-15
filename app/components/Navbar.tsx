@@ -42,7 +42,8 @@ export default function Navbar() {
 
   const navClasses = [
     "fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300",
-    "bg-primary shadow-md",
+    "bg-primary",
+    isOpen ? "" : "shadow-md",
     isScrolled ? "py-2" : "py-3",
   ].join(" ");
 
@@ -93,7 +94,7 @@ export default function Navbar() {
       </div>
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden bg-primary shadow-md border-t border-white/10">
+        <div className="lg:hidden bg-primary">
           <div className="px-4 sm:px-6 lg:px-8 py-4 flex flex-col gap-4">
             {NAV_LINKS.map(({ href, label }) => (
               <Link

@@ -86,7 +86,7 @@ export default function FasilitasPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Fasilitas Cards Section */}
-      <section className="relative min-h-screen bg-surface grid grid-cols-1 md:grid-cols-2">
+      <section className="relative min-h-screen bg-surface grid grid-cols-1 md:grid-cols-2 pt-20 md:pt-0">
         {/* Visual - Left */}
         <div className="relative w-full h-[45vh] md:h-full bg-white overflow-hidden">
           <Image
@@ -97,7 +97,7 @@ export default function FasilitasPage() {
             priority
           />
           <div className="absolute inset-0 bg-white/40" />
-          <div className="absolute inset-0 flex items-center justify-center">
+          <div className="absolute inset-0 flex items-center justify-center [@media(max-height:740px)]:py-6">
             <div className="flex flex-col items-center gap-6">
               <div className="w-24 h-24 rounded-full border border-primary/15 bg-surface flex items-center justify-center">
                 {currentFasilitas.icon}
