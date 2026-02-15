@@ -87,14 +87,14 @@ export default function Home() {
               <div className="flex flex-wrap gap-4 mt-10">
                 <Link
                   href="#daftar"
-                  className="inline-flex items-center justify-center h-12 px-8 bg-white text-primary text-base font-semibold rounded-xl hover:bg-gray-100 transition shadow-sm"
+                  className="inline-flex items-center justify-center h-12 min-w-[200px] px-8 bg-white text-primary text-base font-semibold rounded-xl hover:bg-gray-100 transition shadow-sm"
                 >
                   Daftar Sekarang
                 </Link>
                 <a
                   href="/documents/Pedoman-DPRI-2026.pdf"
                   download="Pedoman-DPRI-2026.pdf"
-                  className="inline-flex items-center justify-center h-12 px-8 bg-transparent text-white text-base font-semibold rounded-xl border border-white/30 hover:bg-white/10 transition gap-2"
+                  className="inline-flex items-center justify-center h-12 min-w-[200px] px-8 bg-transparent text-white text-base font-semibold rounded-xl border border-white/30 hover:bg-white/10 transition gap-2"
                 >
                   <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
