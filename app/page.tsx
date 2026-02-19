@@ -107,6 +107,21 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Profile Video - full section */}
+      <section className="relative z-10 min-h-screen bg-black flex items-center justify-center">
+        <div className="absolute inset-0 flex items-center justify-center">
+          <video
+            src="/video/Profile%20Video_DPRI%202026.webm"
+            className="w-full h-full max-h-screen object-contain"
+            controls
+            playsInline
+            aria-label="Profile Video DPRI 2026"
+          >
+            Format video tidak didukung. Silakan gunakan browser terbaru.
+          </video>
+        </div>
+      </section>
+
       {/* Hall of Fame */}
       <section className="relative z-10 min-h-screen bg-primary grid grid-cols-1 md:grid-cols-2">
         {/* Image - Left */}
