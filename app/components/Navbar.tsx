@@ -40,10 +40,14 @@ export default function Navbar() {
       : `${base} text-white/80 hover:text-white`;
   };
 
+  /** Transparent only on beranda (home) when at top; other pages keep solid nav */
+  const isHome = pathname === "/";
+  const isTransparent = isHome && !isScrolled;
+
   const navClasses = [
     "fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300",
-    "bg-primary",
-    isOpen ? "" : "shadow-md",
+    isTransparent ? "bg-transparent" : "bg-primary",
+    isOpen ? "" : isTransparent ? "" : "shadow-md",
     isScrolled ? "py-2" : "py-3",
   ].join(" ");
 
