@@ -107,9 +107,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Profile Video - fit, landscape di mobile (bukan full screen portrait) */}
-      <section className="relative z-10 bg-black flex items-center justify-center">
-        <div className="w-full aspect-video">
+      {/* Profile Video - fit saja (bukan min-h-screen), landscape di mobile */}
+      <section className="relative z-10 bg-black flex flex-col items-center justify-center">
+        <div className="w-full aspect-video max-h-screen">
           <video
             src="/video/Profile%20Video_DPRI%202026.webm"
             className="w-full h-full object-contain"
@@ -120,6 +120,9 @@ export default function Home() {
             Format video tidak didukung. Silakan gunakan browser terbaru.
           </video>
         </div>
+        <p className="text-white/80 text-center text-sm md:text-base py-4 px-4">
+          Vidio Profil Duta Pelajar Remjaa Indonesia 2026
+        </p>
       </section>
 
       {/* Hall of Fame */}
