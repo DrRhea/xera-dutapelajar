@@ -107,12 +107,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Profile Video - full section */}
-      <section className="relative z-10 min-h-screen bg-black flex items-center justify-center">
-        <div className="absolute inset-0 flex items-center justify-center">
+      {/* Profile Video - fit, landscape di mobile (bukan full screen portrait) */}
+      <section className="relative z-10 bg-black flex items-center justify-center">
+        <div className="w-full aspect-video">
           <video
             src="/video/Profile%20Video_DPRI%202026.webm"
-            className="w-full h-full max-h-screen object-contain"
+            className="w-full h-full object-contain"
             controls
             playsInline
             aria-label="Profile Video DPRI 2026"
