@@ -120,9 +120,14 @@ export default function Home() {
             Format video tidak didukung. Silakan gunakan browser terbaru.
           </video>
         </div>
-        <p className="text-white/80 text-center text-sm md:text-base py-4 px-4">
-          Vidio Profil Duta Pelajar Remjaa Indonesia 2026
-        </p>
+        <div className="w-full max-w-3xl mx-auto py-6 px-4 sm:px-6 text-center space-y-1">
+          <p className="text-xs uppercase tracking-[0.2em] text-white/70">
+            Video Profil
+          </p>
+          <p className="text-base md:text-lg font-semibold text-white tracking-tight leading-snug">
+            Duta Pelajar Remaja Indonesia 2026
+          </p>
+        </div>
       </section>
 
       {/* Hall of Fame */}
