@@ -71,7 +71,7 @@ export default function Navbar() {
               DPR Indonesia
             </span>
           </Link>
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden xl:flex items-center gap-8">
             {NAV_LINKS.map(({ href, label }) => (
               <Link key={href} href={href} className={linkClass(href)}>
                 {label}
@@ -82,7 +82,7 @@ export default function Navbar() {
             type="button"
             aria-label="Toggle menu"
             onClick={() => setIsOpen((prev) => !prev)}
-            className="block lg:hidden text-white"
+            className="block xl:hidden text-white"
           >
             {isOpen ? (
               <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -98,7 +98,7 @@ export default function Navbar() {
       </div>
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden bg-primary">
+        <div className="xl:hidden bg-primary">
           <div className="px-4 sm:px-6 lg:px-8 py-4 flex flex-col gap-4">
             {NAV_LINKS.map(({ href, label }) => (
               <Link
